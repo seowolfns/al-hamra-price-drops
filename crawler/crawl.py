@@ -1,109 +1,192 @@
 #!/usr/bin/env python3
-"""Al Hamra Village Price Drop Crawler"""
-import json, re, time, random, logging
-from datetime import datetime, timezone
+"""
+PropertyFinder price-drop crawler – Al Hamra Village, Al Marjan Island, Mina Al Arab
+Runs via GitHub Actions; commits updated JSON back to the repo.
+"""
+import json, time, random, os, re, datetime
 from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
-BASE_URL   = "https://www.propertyfinder.ae"
-SEARCH_URL = lambda p: f"{BASE_URL}/en/search?l=151&c=1&fu=0&ob=np&page={p}"
-MAX_PAGES  = 120
-MIN_DELAY  = 1.2
-MAX_DELAY  = 2.5
-DATA_DIR   = Path(__file__).parent.parent / "data"
-HEADERS = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36","Accept-Language":"en-US,en;q=0.9","Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8","Referer":"https://www.propertyfinder.ae/"}
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/123.0.0.0 Safari/537.36",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+}
 
-logging.basicConfig(level=logging.INFO,format="%(asctime)s %(levelname)-7s %(message)s",datefmt="%H:%M:%S")
-log = logging.getLogger(__name__)
+MAX_PAGES = 120
 
-def parse_page(html):
-    soup = BeautifulSoup(html, "lxml")
-    results = []
-    for card in soup.find_all(attrs={"data-testid":"property-card"}):
+LOCATIONS = [
+    {"id": "al-hamra",       "name": "Al Hamra Village",   "l": "151", "max_pages": 120},
+    {"id": "marjan-island",  "name": "Al Marjan Island",   "l": "152", "max_pages": 120},
+    {"id": "mina-al-arab",   "name": "Mina Al Arab",       "l": "156", "max_pages": 120},
+]
+
+BASE_DIR = Path(__file__).parent.parent / "data"
+
+
+def fetch_page(session, url, retries=3):
+    for attempt in range(retries):
         try:
-            link = card.find("a", href=re.compile(r"/plp/"))
-            if not link: continue
-            href = link["href"]
-            if href.startswith("/"): href = BASE_URL + href
-            listing_id = href.rstrip("/").split("/")[-1].replace(".html","").split("-")[-1]
-            if not listing_id or len(listing_id) < 5: continue
-            price_el = card.find(class_=re.compile(r"price__"))
-            if not price_el: continue
-            price = int(re.sub(r"[^0-9]","",price_el.get_text(strip=True)))
-            if not price: continue
-            type_el  = card.find(class_=re.compile(r"property-type__"))
-            title_el = card.find(class_=re.compile(r"title__"))
-            loc_el   = card.find(class_=re.compile(r"location__"))
-            details  = [d.get_text(strip=True) for d in card.find_all(class_=re.compile(r"details-item__"))]
-            results.append({"id":listing_id,"href":href,"price":price,
-                "type":  type_el.get_text(strip=True)  if type_el  else "",
-                "title": title_el.get_text(strip=True) if title_el else "",
-                "location":loc_el.get_text(strip=True) if loc_el   else "",
-                "beds":  details[0] if len(details)>0 else "",
-                "baths": details[1] if len(details)>1 else "",
-                "sqft":  int(re.sub(r"[^0-9]","",details[2])) if len(details)>2 and details[2] else 0})
+            r = session.get(url, headers=HEADERS, timeout=30)
+            r.raise_for_status()
+            return r.text
         except Exception as e:
-            log.debug("Card parse error: %s", e)
-    return results
+            print(f"  Attempt {attempt+1} failed: {e}")
+            time.sleep(5)
+    return None
 
-def crawl():
-    sess = requests.Session(); sess.headers.update(HEADERS)
-    snap = {}; max_p = MAX_PAGES; errors = 0
-    for page in range(1, max_p+1):
-        log.info("Page %3d/%d | %d listings", page, max_p, len(snap))
+
+def parse_listings(html):
+    soup = BeautifulSoup(html, "lxml")
+    cards = soup.select('[data-testid="property-card"]')
+    listings = []
+    for card in cards:
         try:
-            r = sess.get(SEARCH_URL(page), timeout=20); r.raise_for_status()
-        except requests.RequestException as e:
-            errors += 1; log.warning("Page %d error: %s", page, e); time.sleep(3); continue
-        if page == 1:
-            m = re.search(r"([0-9,]+)\s*propert", r.text, re.I)
-            if m:
-                total = int(m.group(1).replace(",",""))
-                max_p = min(MAX_PAGES, -(-total//24))
-                log.info("Total: %d listings -> %d pages", total, max_p)
-        listings = parse_page(r.text)
-        if not listings and page > 2: log.info("Page %d empty, stopping.", page); break
-        for p in listings: snap[p["id"]] = p
-        time.sleep(MIN_DELAY + random.random()*(MAX_DELAY-MIN_DELAY))
-    log.info("Done: %d listings, %d errors", len(snap), errors)
-    return snap
+            link_el = card.select_one('a[href*="/plp/"]')
+            if not link_el:
+                continue
+            url = "https://www.propertyfinder.ae" + link_el["href"]
+            prop_id = url.split("/")[-1].split(".")[0]
 
-def compute_drops(new_snap, old_snap):
+            price_el = card.select_one('[class*="price__"]')
+            price_raw = price_el.get_text(strip=True) if price_el else ""
+            price = int(re.sub(r"[^0-9]", "", price_raw)) if price_raw else 0
+            if price == 0:
+                continue
+
+            title_el = card.select_one('[class*="title__"]')
+            title = title_el.get_text(strip=True) if title_el else ""
+
+            type_el = card.select_one('[class*="property-type__"]')
+            prop_type = type_el.get_text(strip=True) if type_el else ""
+
+            location_el = card.select_one('[class*="location__"]')
+            location = location_el.get_text(strip=True) if location_el else ""
+
+            detail_els = card.select('[class*="details-item__"]')
+            beds = baths = sqft = 0
+            for el in detail_els:
+                t = el.get_text(strip=True).lower()
+                num = re.sub(r"[^0-9]", "", t)
+                if not num:
+                    continue
+                if "bed" in t or "studio" in t:
+                    beds = int(num) if num else 0
+                elif "bath" in t:
+                    baths = int(num) if num else 0
+                elif "sqft" in t or "sq" in t:
+                    sqft = int(num) if num else 0
+
+            price_sqft = round(price / sqft) if sqft > 0 else 0
+
+            listings.append({
+                "id": prop_id, "url": url, "title": title,
+                "type": prop_type, "location": location,
+                "price": price, "beds": beds, "baths": baths,
+                "sqft": sqft, "price_sqft": price_sqft,
+            })
+        except Exception as e:
+            print(f"  Parse error: {e}")
+            continue
+    return listings
+
+
+def crawl_location(session, loc_config):
+    loc_id    = loc_config["id"]
+    loc_name  = loc_config["name"]
+    l_param   = loc_config["l"]
+    max_pages = loc_config["max_pages"]
+
+    print(f"\n=== Crawling {loc_name} (l={l_param}) ===")
+    data_dir = BASE_DIR / loc_id
+    data_dir.mkdir(parents=True, exist_ok=True)
+
+    snapshot_path = data_dir / "snapshot.json"
+    drops_path    = data_dir / "drops.json"
+    meta_path     = data_dir / "meta.json"
+
+    old_snapshot = {}
+    if snapshot_path.exists():
+        try:
+            old_snapshot = json.loads(snapshot_path.read_text())
+        except Exception:
+            pass
+
+    new_snapshot = {}
+    total_pages  = 0
+
+    for page in range(1, max_pages + 1):
+        url = (f"https://www.propertyfinder.ae/en/search"
+               f"?l={l_param}&c=1&fu=0&ob=np&page={page}")
+        print(f"  Page {page}: {url}")
+        html = fetch_page(session, url)
+        if not html:
+            print(f"  Failed to fetch page {page}, stopping.")
+            break
+
+        listings = parse_listings(html)
+        if not listings:
+            print(f"  No listings on page {page}, done.")
+            break
+
+        for prop in listings:
+            new_snapshot[prop["id"]] = prop
+
+        total_pages = page
+        time.sleep(random.uniform(1.2, 2.5))
+
+    print(f"  Crawled {total_pages} pages, {len(new_snapshot)} listings.")
+
+    # Detect drops
     drops = []
-    for lid, curr in new_snap.items():
-        prev = old_snap.get(lid)
-        if prev and prev["price"] > curr["price"]:
-            drop_abs = prev["price"] - curr["price"]
-            drops.append({**curr,"prev_price":prev["price"],"drop_abs":drop_abs,
-                "drop_pct":round(drop_abs/prev["price"]*100,2),
-                "detected_at":datetime.now(timezone.utc).isoformat()})
-    drops.sort(key=lambda d: d["drop_pct"], reverse=True)
-    return drops
+    for prop_id, new_prop in new_snapshot.items():
+        if prop_id in old_snapshot:
+            old_price = old_snapshot[prop_id]["price"]
+            new_price = new_prop["price"]
+            if new_price < old_price and old_price > 0:
+                drop_aed  = old_price - new_price
+                drop_pct  = round((drop_aed / old_price) * 100, 1)
+                if drop_pct >= 1.0:
+                    drops.append({
+                        **new_prop,
+                        "old_price":  old_price,
+                        "new_price":  new_price,
+                        "drop_aed":   drop_aed,
+                        "drop_pct":   drop_pct,
+                        "detected_at": datetime.datetime.utcnow().isoformat() + "Z",
+                    })
 
-def merge_history(new_drops, drops_path):
-    old = json.loads(drops_path.read_text()) if drops_path.exists() else []
-    new_ids = {d["id"] for d in new_drops}
-    merged = new_drops + [d for d in old if d["id"] not in new_ids]
-    merged.sort(key=lambda d: d["drop_pct"], reverse=True)
-    return merged
+    drops.sort(key=lambda x: x["drop_pct"], reverse=True)
+    print(f"  {len(drops)} price drops detected.")
+
+    # Write output
+    snapshot_path.write_text(json.dumps(new_snapshot, indent=2))
+    drops_path.write_text(json.dumps(drops, indent=2))
+    meta_path.write_text(json.dumps({
+        "last_run":        datetime.datetime.utcnow().isoformat() + "Z",
+        "listings_tracked": len(new_snapshot),
+        "drops_found":     len(drops),
+        "location":        loc_name,
+        "location_id":     loc_id,
+    }, indent=2))
+
+    return len(new_snapshot), len(drops)
+
 
 def main():
-    DATA_DIR.mkdir(exist_ok=True)
-    snap_path  = DATA_DIR/"snapshot.json"
-    drops_path = DATA_DIR/"drops.json"
-    meta_path  = DATA_DIR/"meta.json"
-    old_snap = json.loads(snap_path.read_text()) if snap_path.exists() else {}
-    log.info("Previous snapshot: %d listings", len(old_snap))
-    new_snap  = crawl()
-    new_drops = compute_drops(new_snap, old_snap)
-    all_drops = merge_history(new_drops, drops_path)
-    snap_path.write_text(json.dumps(new_snap,   ensure_ascii=False, indent=2))
-    drops_path.write_text(json.dumps(all_drops, ensure_ascii=False, indent=2))
-    meta = {"last_scan":datetime.now(timezone.utc).isoformat(),"total_listings":len(new_snap),"total_drops":len(all_drops),"new_drops_this_run":len(new_drops)}
-    meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2))
-    log.info("Wrote %d drops, %d listings", len(all_drops), len(new_snap))
-    print(json.dumps(meta, indent=2))
+    session = requests.Session()
+    session.headers.update(HEADERS)
+    totals = {}
+    for loc in LOCATIONS:
+        tracked, drops = crawl_location(session, loc)
+        totals[loc["id"]] = {"tracked": tracked, "drops": drops}
+    print("\n=== Summary ===")
+    for k, v in totals.items():
+        print(f"  {k}: {v['tracked']} tracked, {v['drops']} drops")
+
 
 if __name__ == "__main__":
     main()
