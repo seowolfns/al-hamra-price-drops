@@ -1,145 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Al Hamra Village · Price Drop Monitor</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>RAK Price Drops · Al Hamra | Marjan Island | Mina Al Arab</title>
 <style>
-  :root{--bg:#0d0d0d;--surface:#141414;--surface2:#1e1e1e;--border:#2a2a2a;--red:#ff2d55;--green:#30d158;--orange:#ff9f0a;--text:#f0f0f0;--muted:#888;--font:'Courier New',Courier,monospace}
-  *{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh}a{color:inherit}
-  header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-  .logo{font-size:1.2rem;font-weight:bold;letter-spacing:2px}.logo span{color:var(--red)}
-  .live-badge{display:flex;align-items:center;gap:6px;font-size:.7rem;color:var(--green);border:1px solid var(--green);padding:3px 8px;border-radius:4px}
-  .live-badge::before{content:'';display:inline-block;width:7px;height:7px;background:var(--green);border-radius:50%;animation:pulse 1.5s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-  .header-right{margin-left:auto;font-size:.75rem;color:var(--muted);text-align:right;line-height:1.6}.header-right span{color:var(--text)}
-  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--border);border-bottom:1px solid var(--border)}
-  .stat{background:var(--surface);padding:16px 20px;text-align:center}
-  .stat .val{font-size:1.6rem;font-weight:bold;color:var(--red)}.stat .lbl{font-size:.65rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
-  .toolbar{display:flex;align-items:center;gap:10px;padding:12px 20px;background:var(--surface);border-bottom:1px solid var(--border);flex-wrap:wrap}
-  .filter-btn{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:6px 14px;border-radius:6px;cursor:pointer;font-family:var(--font);font-size:.8rem;transition:all .2s}
-  .filter-btn.active{background:var(--red);border-color:var(--red);color:#fff}.filter-btn:hover{border-color:var(--red)}
-  input[type=number],select{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;font-family:var(--font);font-size:.8rem}
-  input[type=number]{width:80px}input[type=number]:focus,select:focus{outline:none;border-color:var(--red)}
-  .refresh-btn{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:8px 18px;border-radius:6px;cursor:pointer;font-family:var(--font);font-size:.8rem;margin-left:auto;transition:all .2s}
-  .refresh-btn:hover{border-color:var(--green);color:var(--green)}
-  .status-bar{font-size:.72rem;color:var(--muted);padding:6px 20px;background:var(--surface);border-bottom:1px solid var(--border)}
-  .status-bar.ok{color:var(--green)}.status-bar.err{color:var(--red)}
-  .drops-header{padding:12px 20px;font-size:.75rem;color:var(--muted);letter-spacing:1px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border)}
-  .drops-header .count{color:var(--red);font-weight:bold;font-size:1rem}.drops-header .ts{margin-left:auto;font-size:.7rem}
-  .listings{padding:16px 16px 40px;max-width:1200px;margin:0 auto}
-  .card{background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:10px;padding:18px 20px;display:grid;grid-template-columns:40px 1fr auto;gap:16px;align-items:center;transition:border-color .2s}
-  .card:hover{border-color:#444}.card.new-drop{border-color:var(--red);animation:flashIn .6s ease}
-  @keyframes flashIn{from{background:rgba(255,45,85,.15)}to{background:var(--surface)}}
-  .rank{font-size:1rem;color:var(--muted);font-weight:bold;min-width:32px}
-  .card-body{display:flex;flex-direction:column;gap:6px}
-  .card-title{font-size:.95rem;font-weight:bold}.card-title a{color:var(--text);text-decoration:none}.card-title a:hover{color:var(--red)}
-  .card-location{font-size:.75rem;color:var(--muted)}
-  .card-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
-  .tag{font-size:.65rem;padding:2px 8px;border-radius:4px;border:1px solid var(--border);color:var(--muted);background:var(--surface2)}
-  .tag.dropped{border-color:var(--orange);color:var(--orange)}.tag.isnew{border-color:var(--green);color:var(--green)}
-  .card-price{text-align:right;min-width:180px}
-  .card-drop{font-size:1.5rem;font-weight:bold;color:var(--red)}.card-pct{font-size:.8rem;color:var(--red);margin-bottom:4px}
-  .card-old-new{font-size:.72rem;color:var(--muted)}.card-old-new .old{text-decoration:line-through}.card-old-new .new{color:var(--text)}
-  .empty-state{text-align:center;padding:80px 20px;color:var(--muted)}
-  .empty-state .icon{font-size:3rem;margin-bottom:16px}.empty-state p{font-size:.9rem;line-height:1.6;max-width:440px;margin:0 auto}
-  .footer{text-align:center;padding:14px;border-top:1px solid var(--border);font-size:.7rem;color:var(--muted);margin-top:20px}
-  .footer a{color:var(--muted);text-decoration:none;margin:0 8px}.footer a:hover{color:var(--red)}
-  .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:100;align-items:center;justify-content:center}
-  .modal.open{display:flex}
-  .modal-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;max-width:500px;width:90%;font-size:.85rem;line-height:1.8}
-  .modal-box h3{color:var(--red);margin-bottom:12px;font-size:1.1rem}
-  .modal-close{float:right;cursor:pointer;background:none;border:none;color:var(--muted);font-size:1.3rem}
-  code{background:var(--surface2);padding:2px 6px;border-radius:4px;font-size:.8rem}
-  @media(max-width:600px){.card{grid-template-columns:30px 1fr}.card-price{grid-column:2}.card-drop{font-size:1.2rem}}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#0d0d0d;color:#e0e0e0;font-family:'Courier New',monospace;font-size:14px;}
+a{color:inherit;text-decoration:none;}
+
+/* Header */
+header{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;border-bottom:1px solid #1e1e1e;background:#0a0a0a;}
+.logo{font-size:18px;font-weight:700;letter-spacing:2px;}
+.logo span{color:#e63232;}
+.live-badge{background:#0d2e0d;color:#22c55e;border:1px solid #22c55e;padding:3px 10px;border-radius:3px;font-size:11px;letter-spacing:1px;}
+.meta-info{font-size:11px;color:#555;text-align:right;}
+
+/* Location tabs */
+.loc-tabs{display:flex;gap:0;border-bottom:2px solid #1e1e1e;background:#0a0a0a;padding:0 24px;}
+.loc-tab{padding:12px 22px;cursor:pointer;font-size:13px;font-family:inherit;letter-spacing:1px;background:none;border:none;color:#555;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .2s;}
+.loc-tab:hover{color:#ccc;}
+.loc-tab.active{color:#e63232;border-bottom-color:#e63232;}
+
+/* Stats bar */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #1a1a1a;}
+.stat{padding:18px 24px;border-right:1px solid #1a1a1a;text-align:center;}
+.stat:last-child{border-right:none;}
+.stat-val{font-size:28px;font-weight:700;color:#e63232;}
+.stat-lbl{font-size:10px;color:#444;letter-spacing:2px;margin-top:4px;}
+
+/* Filters */
+.filters{display:flex;align-items:center;gap:12px;padding:12px 24px;border-bottom:1px solid #1a1a1a;flex-wrap:wrap;}
+.filter-group{display:flex;gap:8px;align-items:center;}
+.filter-label{font-size:11px;color:#555;letter-spacing:1px;}
+.filter-btn{background:none;border:1px solid #2a2a2a;color:#666;padding:6px 14px;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:1px;transition:all .15s;}
+.filter-btn:hover{border-color:#555;color:#ccc;}
+.filter-btn.active{background:#e63232;border-color:#e63232;color:#fff;}
+.filter-input{background:#111;border:1px solid #2a2a2a;color:#ccc;padding:6px 10px;width:60px;font-family:inherit;font-size:12px;text-align:center;}
+.filter-input:focus{outline:none;border-color:#e63232;}
+select.sort-select{background:#111;border:1px solid #2a2a2a;color:#ccc;padding:6px 12px;font-family:inherit;font-size:12px;cursor:pointer;}
+select.sort-select:focus{outline:none;border-color:#e63232;}
+.refresh-btn{margin-left:auto;background:none;border:1px solid #2a2a2a;color:#555;padding:6px 16px;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:1px;transition:all .2s;}
+.refresh-btn:hover{border-color:#e63232;color:#e63232;}
+
+/* Terminal log */
+.log{padding:8px 24px;font-size:11px;color:#22c55e;background:#050505;border-bottom:1px solid #111;min-height:28px;}
+
+/* Count header */
+.count-header{padding:10px 24px;font-size:11px;color:#444;letter-spacing:2px;border-bottom:1px solid #111;}
+
+/* Drop grid */
+.drops-grid{padding:16px 24px;display:flex;flex-direction:column;gap:8px;}
+
+.drop-card{display:grid;grid-template-columns:40px 1fr auto;gap:0;border:1px solid #1a1a1a;background:#0d0d0d;transition:border-color .15s;}
+.drop-card:hover{border-color:#2a2a2a;}
+
+.rank{display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:#1e1e1e;border-right:1px solid #1a1a1a;padding:0 12px;min-width:50px;}
+
+.drop-info{padding:12px 16px;}
+.drop-type{font-size:10px;color:#555;letter-spacing:2px;margin-bottom:4px;}
+.drop-title{font-size:13px;color:#ccc;margin-bottom:6px;line-height:1.4;}
+.drop-details{display:flex;gap:16px;font-size:11px;color:#444;}
+.drop-detail{display:flex;gap:4px;align-items:center;}
+
+.drop-price{padding:12px 20px;text-align:right;display:flex;flex-direction:column;justify-content:center;gap:4px;border-left:1px solid #1a1a1a;}
+.price-old{font-size:11px;color:#444;text-decoration:line-through;}
+.price-new{font-size:15px;font-weight:700;color:#e0e0e0;}
+.price-drop-aed{font-size:11px;color:#e63232;}
+.price-drop-pct{font-size:22px;font-weight:700;color:#e63232;}
+
+/* Empty state */
+.empty{text-align:center;padding:80px 24px;color:#333;}
+.empty-icon{font-size:48px;margin-bottom:16px;}
+.empty-msg{font-size:14px;letter-spacing:1px;}
+
+/* Footer */
+footer{padding:24px;border-top:1px solid #111;text-align:center;color:#333;font-size:11px;display:flex;gap:24px;justify-content:center;}
+footer a{color:#444;}
+footer a:hover{color:#888;}
 </style>
 </head>
 <body>
+
 <header>
-  <div class="logo">&#127968; AL HAMRA <span>PRICE DROPS</span></div>
-  <div class="live-badge">LIVE DATA</div>
-  <div class="header-right">Last scan: <span id="lastScan">&#8212;</span><br><span id="watchCount">&#8212;</span> listings tracked</div>
+  <div class="logo">&#127  RAK <span>PRICE</span> DROPS</div>
+  <div class="live-badge">&#9679 LIVE DATA</div>
+  <div class="meta-info">
+    Last scan: <span id="last-scan">–</span><br>
+    <span id="listings-count">0</span> listings tracked
+  </div>
 </header>
-<div class="stats">
-  <div class="stat"><div class="val" id="statDrops">&#8212;</div><div class="lbl">Drops Found</div></div>
-  <div class="stat"><div class="val" id="statAvgPct">&#8212;</div><div class="lbl">Avg Drop %</div></div>
-  <div class="stat"><div class="val" id="statBiggest">&#8212;</div><div class="lbl">Biggest Drop</div></div>
-  <div class="stat"><div class="val" id="statTotal">&#8212;</div><div class="lbl">Total Dropped (AED)</div></div>
+
+<!-- Location Tabs -->
+<div class="loc-tabs">
+  <button class="loc-tab active" data-loc="al-hamra">AL HAMRA VILLAGE</button>
+  <button class="loc-tab" data-loc="marjan-island">AL MARJAN ISLAND</button>
+  <button class="loc-tab" data-loc="mina-al-arab">MINA AL ARAB</button>
 </div>
-<div class="toolbar">
-  <span style="font-size:.75rem;color:var(--muted);letter-spacing:1px">TYPE:</span>
-  <button class="filter-btn active" data-type="all">All</button>
-  <button class="filter-btn" data-type="Apartment">Apartments</button>
-  <button class="filter-btn" data-type="Villa">Villas</button>
-  <button class="filter-btn" data-type="Townhouse">Townhouses</button>
-  <button class="filter-btn" data-type="Penthouse">Penthouses</button>
-  <span style="font-size:.75rem;color:var(--muted);letter-spacing:1px;margin-left:8px">MIN DROP:</span>
-  <input type="number" id="minDropPct" value="3" min="0" max="99"> %
-  <span style="font-size:.75rem;color:var(--muted);letter-spacing:1px">SORT:</span>
-  <select id="sortBy">
-    <option value="drop_pct">Biggest % Drop</option>
-    <option value="drop_abs">Biggest AED Drop</option>
-    <option value="detected">Most Recent</option>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="stat"><div class="stat-val" id="stat-drops">0</div><div class="stat-lbl">DROPS FOUND</div></div>
+  <div class="stat"><div class="stat-val" id="stat-avg">–</div><div class="stat-lbl">AVG DROP %</div></div>
+  <div class="stat"><div class="stat-val" id="stat-biggest">–</div><div class="stat-lbl">BIGGEST DROP</div></div>
+  <div class="stat"><div class="stat-val" id="stat-total-aed">–</div><div class="stat-lbl">TOTAL DROPPED (AED)</div></div>
+</div>
+
+<!-- Filters -->
+<div class="filters">
+  <span class="filter-label">TYPE:</span>
+  <div class="filter-group" id="type-filters">
+    <button class="filter-btn active" data-type="all">All</button>
+    <button class="filter-btn" data-type="apartment">Apartments</button>
+    <button class="filter-btn" data-type="villa">Villas</button>
+    <button class="filter-btn" data-type="townhouse">Townhouses</button>
+    <button class="filter-btn" data-type="penthouse">Penthouses</button>
+  </div>
+  <span class="filter-label">MIN DROP:</span>
+  <input class="filter-input" type="number" id="min-drop" value="3" min="0" max="99">
+  <span class="filter-label">%</span>
+  <span class="filter-label">SORT:</span>
+  <select class="sort-select" id="sort-by">
+    <option value="pct">Biggest % Drop</option>
+    <option value="aed">Biggest AED Drop</option>
+    <option value="recent">Most Recent</option>
     <option value="price">Lowest Price</option>
   </select>
-  <button class="refresh-btn" onclick="loadData()">&#8635; REFRESH</button>
+  <button class="refresh-btn" id="refresh-btn">&#8635 REFRESH</button>
 </div>
-<div class="status-bar" id="statusBar">&gt; Loading data...</div>
-<div class="drops-header"><span class="count" id="dropCount">0</span> PRICE DROPS DETECTED<span class="ts" id="dropTs"></span></div>
-<div class="listings" id="listings"><div class="empty-state"><div class="icon">&#8987;</div><p>Loading...</p></div></div>
-<div class="footer">
-  <a href="#" onclick="document.getElementById('howModal').classList.add('open');return false">&#9658; HOW IT WORKS</a>
-  <a href="https://www.propertyfinder.ae/en/search?l=151&amp;c=1&amp;fu=0&amp;ob=nd" target="_blank" rel="noopener">&#9658; VIEW ON PROPERTYFINDER</a>
-  <a href="https://github.com/seowolfns/al-hamra-price-drops" target="_blank" rel="noopener">&#9658; GITHUB REPO</a>
-  <br><br><span style="color:#555">Data updated daily by GitHub Actions &middot; Source: propertyfinder.ae</span>
-</div>
-<div class="modal" id="howModal">
-  <div class="modal-box">
-    <button class="modal-close" onclick="document.getElementById('howModal').classList.remove('open')">&#x2715;</button>
-    <h3>How It Works</h3>
-    <p>GitHub Actions runs daily at 07:00 Dubai time, crawling all ~2,600 PropertyFinder listings for Al Hamra Village across ~110 pages.</p>
-    <p style="margin-top:8px">Each listing price is compared against the previous day snapshot. Any decrease is flagged as a <span style="color:var(--red)">price drop</span>.</p>
-    <p style="margin-top:8px">All data is static JSON served via GitHub Pages. No backend. No cookies. &#128274;</p>
+
+<div class="log" id="log-line">&gt; Loading...</div>
+<div class="count-header"><span id="drop-count">0</span> PRICE DROPS DETECTED</div>
+
+<div class="drops-grid" id="drops-grid">
+  <div class="empty">
+    <div class="empty-icon">&#128269</div>
+    <div class="empty-msg">No data yet. Run the crawler at least twice.</div>
   </div>
 </div>
+
+<footer>
+  <a href="#">&#9658 HOW IT WORKS</a>
+  <a href="https://www.propertyfinder.ae" target="_blank">&#9658 VIEW ON PROPERTYFINDER</a>
+  <a href="https://github.com/seowolfns/al-hamra-price-drops" target="_blank">&#9658 GITHUB REPO</a>
+</footer>
+<div style="text-align:center;padding:8px;color:#222;font-size:10px;border-top:1px solid #111;">
+  Data updated daily by GitHub Actions &middot; Source: propertyfinder.ae
+</div>
+
 <script>
-var drops=[],activeType='all';
-async function loadData(){
-  setStatus('Loading...','');
-  try{
-    var t=Date.now();
-    var[dr,mr]=await Promise.all([fetch('data/drops.json?_='+t),fetch('data/meta.json?_='+t)]);
-    if(!dr.ok)throw new Error('data/drops.json not found. Go to Actions tab and run the workflow manually.');
-    drops=await dr.json();
-    if(mr.ok){var m=await mr.json();var ls=m.last_scan?new Date(m.last_scan):null;document.getElementById('lastScan').textContent=ls?ls.toLocaleString():'-';document.getElementById('watchCount').textContent=(m.total_listings||0).toLocaleString();document.getElementById('dropTs').textContent=ls?ls.toLocaleString():'';}
-    setStatus('Loaded. '+drops.length+' price drops tracked.','ok');renderDrops();updateStats();
-  }catch(e){setStatus('Error: '+e.message,'err');document.getElementById('listings').innerHTML='<div class="empty-state"><div class="icon">&#9888;</div><p>'+esc(e.message)+'</p></div>';}
+const LOCATIONS = {
+  'al-hamra':      { name: 'Al Hamra Village',  dataPath: 'data/al-hamra/' },
+  'marjan-island': { name: 'Al Marjan Island',  dataPath: 'data/marjan-island/' },
+  'mina-al-arab':  { name: 'Mina Al Arab',      dataPath: 'data/mina-al-arab/' },
+};
+
+let currentLoc   = 'al-hamra';
+let allDrops     = [];
+let activeType   = 'all';
+
+function fmt(n) {
+  if (n >= 1e6) return (n/1e6).toFixed(1) + 'M';
+  if (n >= 1e3) return (n/1e3).toFixed(0) + 'K';
+  return n.toString();
 }
-function renderDrops(){
-  var minPct=parseFloat(document.getElementById('minDropPct').value)||0,sortBy=document.getElementById('sortBy').value;
-  var filtered=drops.filter(function(d){return(activeType==='all'||d.type===activeType)&&d.drop_pct>=minPct;});
-  filtered.sort(function(a,b){return sortBy==='drop_pct'?b.drop_pct-a.drop_pct:sortBy==='drop_abs'?b.drop_abs-a.drop_abs:sortBy==='detected'?new Date(b.detected_at||0)-new Date(a.detected_at||0):a.price-b.price;});
-  document.getElementById('dropCount').textContent=filtered.length;
-  var c=document.getElementById('listings');
-  if(!filtered.length){c.innerHTML='<div class="empty-state"><div class="icon">&#128269;</div><p>'+(drops.length===0?'No data yet. Run the crawler at least twice.':'No drops match filters.')+'</p></div>';return;}
-  c.innerHTML=filtered.map(function(d,i){
-    var pct=Number(d.drop_pct).toFixed(1),sqftStr=d.sqft?Number(d.sqft).toLocaleString()+' sqft':'',perSqft=d.sqft?'AED '+Math.round(d.price/d.sqft).toLocaleString()+'/sqft':'';
-    var det=d.detected_at?new Date(d.detected_at):null,isNew=det&&Date.now()-det.getTime()<86400000;
-    var h='<div class="card'+(isNew?' new-drop':'')+'"><div class="rank">#'+(i+1)+'</div><div class="card-body"><div class="card-title"><a href="'+esc(d.href)+'" target="_blank" rel="noopener">'+esc(d.title||'Al Hamra Village Property')+'</a></div><div class="card-location">&#128205; '+esc(d.location)+'</div><div class="card-tags">';
-    if(d.type)h+='<span class="tag">'+esc(d.type)+'</span>';if(d.beds)h+='<span class="tag">'+esc(d.beds)+' BR</span>';if(d.baths)h+='<span class="tag">'+esc(d.baths)+' BA</span>';if(sqftStr)h+='<span class="tag">'+sqftStr+'</span>';if(perSqft)h+='<span class="tag">'+perSqft+'</span>';if(isNew)h+='<span class="tag isnew">NEW TODAY</span>';h+='<span class="tag dropped">DROPPED</span>';if(det)h+='<span class="tag">'+det.toLocaleDateString()+'</span>';
-    h+='</div></div><div class="card-price"><div class="card-drop">-AED '+fmtAED(d.drop_abs)+'</div><div class="card-pct">&#9660;'+pct+'%</div><div class="card-old-new"><span class="old">AED '+fmtAED(d.prev_price)+'</span> &rarr; <span class="new">AED '+fmtAED(d.price)+'</span></div></div></div>';
-    return h;
+
+function fmtAED(n) {
+  return 'AED ' + Number(n).toLocaleString('en-US');
+}
+
+async function loadData(locId) {
+  const path = LOCATIONS[locId].dataPath;
+  try {
+    const [dropsResp, metaResp] = await Promise.all([
+      fetch(path + 'drops.json?v=' + Date.now()),
+      fetch(path + 'meta.json?v=' + Date.now()),
+    ]);
+    const drops = await dropsResp.json();
+    const meta  = await metaResp.json();
+    return { drops, meta };
+  } catch(e) {
+    return { drops: [], meta: {} };
+  }
+}
+
+function getFilteredDrops() {
+  const minDrop = parseFloat(document.getElementById('min-drop').value) || 0;
+  let filtered = allDrops.filter(d => d.drop_pct >= minDrop);
+  if (activeType !== 'all') {
+    filtered = filtered.filter(d =>
+      (d.type || '').toLowerCase().includes(activeType)
+    );
+  }
+  const sortBy = document.getElementById('sort-by').value;
+  if (sortBy === 'pct')    filtered.sort((a,b) => b.drop_pct - a.drop_pct);
+  if (sortBy === 'aed')    filtered.sort((a,b) => b.drop_aed - a.drop_aed);
+  if (sortBy === 'recent') filtered.sort((a,b) => (b.detected_at||'').localeCompare(a.detected_at||''));
+  if (sortBy === 'price')  filtered.sort((a,b) => a.new_price - b.new_price);
+  return filtered;
+}
+
+function renderStats(drops) {
+  document.getElementById('stat-drops').textContent = drops.length;
+  if (drops.length === 0) {
+    document.getElementById('stat-avg').textContent = '–';
+    document.getElementById('stat-biggest').textContent = '–';
+    document.getElementById('stat-total-aed').textContent = '–';
+    return;
+  }
+  const avgPct = (drops.reduce((s,d) => s + d.drop_pct, 0) / drops.length).toFixed(1);
+  const biggestPct = Math.max(...drops.map(d => d.drop_pct)).toFixed(1);
+  const totalAed = drops.reduce((s,d) => s + d.drop_aed, 0);
+  document.getElementById('stat-avg').textContent = avgPct + '%';
+  document.getElementById('stat-biggest').textContent = biggestPct + '%';
+  document.getElementById('stat-total-aed').textContent = fmt(totalAed);
+}
+
+function renderCards(drops) {
+  const grid = document.getElementById('drops-grid');
+  document.getElementById('drop-count').textContent = drops.length;
+  if (drops.length === 0) {
+    grid.innerHTML = '<div class="empty"><div class="empty-icon">&#128269</div><div class="empty-msg">No drops match your filters. Try lowering the min drop % or selecting a different type.</div></div>';
+    return;
+  }
+  grid.innerHTML = drops.map((d,i) => {
+    const beds  = d.beds  ? d.beds + ' bed'  : '';
+    const baths = d.baths ? d.baths + ' bath': '';
+    const sqft  = d.sqft  ? d.sqft.toLocaleString() + ' sqft' : '';
+    const psqft = d.price_sqft ? 'AED ' + d.price_sqft.toLocaleString() + '/sqft' : '';
+    const details = [beds, baths, sqft, psqft].filter(Boolean).join('  ·  ');
+    return '<a class="drop-card" href="' + d.url + '" target="_blank">' +
+      '<div class="rank">' + (i+1) + '</div>' +
+      '<div class="drop-info">' +
+        '<div class="drop-type">' + (d.type||'').toUpperCase() + '</div>' +
+        '<div class="drop-title">' + (d.title||d.location||'') + '</div>' +
+        '<div class="drop-details">' + details + '</div>' +
+      '</div>' +
+      '<div class="drop-price">' +
+        '<div class="price-old">' + fmtAED(d.old_price) + '</div>' +
+        '<div class="price-new">' + fmtAED(d.new_price) + '</div>' +
+        '<div class="price-drop-aed">&#9660 AED ' + d.drop_aed.toLocaleString() + '</div>' +
+        '<div class="price-drop-pct">&#9660 ' + d.drop_pct + '%</div>' +
+      '</div>' +
+    '</a>';
   }).join('');
 }
-function updateStats(){var minPct=parseFloat(document.getElementById('minDropPct').value)||0,rel=drops.filter(function(d){return d.drop_pct>=minPct;});document.getElementById('statDrops').textContent=rel.length;if(rel.length){document.getElementById('statAvgPct').textContent=(rel.reduce(function(s,d){return s+d.drop_pct;},0)/rel.length).toFixed(1)+'%';document.getElementById('statBiggest').textContent=Math.max.apply(null,rel.map(function(d){return d.drop_pct;})).toFixed(1)+'%';document.getElementById('statTotal').textContent=fmtShort(rel.reduce(function(s,d){return s+d.drop_abs;},0));}else{['statAvgPct','statBiggest','statTotal'].forEach(function(id){document.getElementById(id).textContent='-';});}}
-function setStatus(m,c){var el=document.getElementById('statusBar');el.textContent='> '+m;el.className='status-bar'+(c?' '+c:'');}
-function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
-function fmtAED(n){return n?Math.round(n).toLocaleString():'0';}
-function fmtShort(n){if(n>=1e9)return(n/1e9).toFixed(1)+'B';if(n>=1e6)return(n/1e6).toFixed(1)+'M';if(n>=1e3)return(n/1e3).toFixed(0)+'K';return n.toLocaleString();}
-document.querySelectorAll('.filter-btn[data-type]').forEach(function(btn){btn.addEventListener('click',function(){document.querySelectorAll('.filter-btn[data-type]').forEach(function(b){b.classList.remove('active');});btn.classList.add('active');activeType=btn.dataset.type;renderDrops();});});
-document.getElementById('minDropPct').addEventListener('input',function(){renderDrops();updateStats();});
-document.getElementById('sortBy').addEventListener('change',renderDrops);
-loadData();
+
+function updateDisplay() {
+  const filtered = getFilteredDrops();
+  renderStats(filtered);
+  renderCards(filtered);
+}
+
+async function switchLocation(locId) {
+  currentLoc = locId;
+  document.querySelectorAll('.loc-tab').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.loc === locId);
+  });
+  const locName = LOCATIONS[locId].name;
+  document.getElementById('log-line').textContent = '> Loading ' + locName + '...';
+  document.getElementById('listings-count').textContent = '0';
+  document.getElementById('last-scan').textContent = '–';
+  allDrops = [];
+  updateDisplay();
+
+  const { drops, meta } = await loadData(locId);
+  allDrops = drops || [];
+  document.getElementById('listings-count').textContent = (meta.listings_tracked || 0).toLocaleString();
+  if (meta.last_run) {
+    const d = new Date(meta.last_run);
+    document.getElementById('last-scan').textContent = d.toLocaleDateString('en-GB', {day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'});
+  }
+  document.getElementById('log-line').textContent = '> Loaded. ' + allDrops.length + ' price drops tracked for ' + locName + '.';
+  updateDisplay();
+}
+
+// Event listeners
+document.querySelectorAll('.loc-tab').forEach(btn => {
+  btn.addEventListener('click', () => switchLocation(btn.dataset.loc));
+});
+document.querySelectorAll('#type-filters .filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#type-filters .filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeType = btn.dataset.type;
+    updateDisplay();
+  });
+});
+document.getElementById('min-drop').addEventListener('input', updateDisplay);
+document.getElementById('sort-by').addEventListener('change', updateDisplay);
+document.getElementById('refresh-btn').addEventListener('click', () => switchLocation(currentLoc));
+
+// Initial load
+switchLocation('al-hamra');
 </script>
 </body>
 </html>
