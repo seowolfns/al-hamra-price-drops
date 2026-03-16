@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-rosso-bay-residence-16169215",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-rosso-bay-residence-16169215.html",
+    "title": "RESALE | HIGHER FLOOR | WYNN VIEW VERIFIED",
+    "type": "Apartment",
+    "location": "Rosso Bay Residence, Al Marjan Island, Ras Al Khaimah",
+    "price": 2000000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 2171,
+    "price_sqft": 921,
+    "old_price": 2075000,
+    "new_price": 2000000,
+    "drop_aed": 75000,
+    "drop_pct": 3.6,
+    "detected_at": "2026-03-16T19:40:08.122929Z"
+  }
+]
