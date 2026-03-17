@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-2PeiOeSNtTM",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-2PeiOeSNtTM.html",
+    "title": "Brand New 1BR | High Floor | Beach Access | Vacant",
+    "type": "Apartment",
+    "location": "Bay Residences, Hayat Island, Mina Al Arab, Ras Al Khaimah",
+    "price": 1299999,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 1633,
+    "price_sqft": 796,
+    "old_price": 1550000,
+    "new_price": 1299999,
+    "drop_aed": 250001,
+    "drop_pct": 16.1,
+    "detected_at": "2026-03-17T16:02:25.437489Z"
+  },
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bayviews-2Q46IWjPoRc",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bayviews-2Q46IWjPoRc.html",
+    "title": "High Floor | PHPP till 2029 | High ROI",
+    "type": "Apartment",
+    "location": "Bayviews, Hayat Island, Mina Al Arab, Ras Al Khaimah",
+    "price": 1200000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 1496,
+    "price_sqft": 802,
+    "old_price": 1300000,
+    "new_price": 1200000,
+    "drop_aed": 100000,
+    "drop_pct": 7.7,
+    "detected_at": "2026-03-17T16:02:25.436248Z"
+  }
+]

@@ -1,1 +1,53 @@
-[]
+[
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-playa-del-sol-2PmnprEw652",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-playa-del-sol-2PmnprEw652.html",
+    "title": "BIG LAYOUT | SEA VIEW | HIGH FLOOR | INVESTOR DEAL",
+    "type": "Apartment",
+    "location": "Playa Del Sol, Al Marjan Island, Ras Al Khaimah",
+    "price": 2990000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 2076,
+    "price_sqft": 1440,
+    "old_price": 3200000,
+    "new_price": 2990000,
+    "drop_aed": 210000,
+    "drop_pct": 6.6,
+    "detected_at": "2026-03-17T15:57:12.414177Z"
+  },
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-rosso-bay-residence-16169215",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-rosso-bay-residence-16169215.html",
+    "title": "RESALE | HIGHER FLOOR | WYNN VIEW VERIFIED",
+    "type": "Apartment",
+    "location": "Rosso Bay Residence, Al Marjan Island, Ras Al Khaimah",
+    "price": 2000000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 2171,
+    "price_sqft": 921,
+    "old_price": 2075000,
+    "new_price": 2000000,
+    "drop_aed": 75000,
+    "drop_pct": 3.6,
+    "detected_at": "2026-03-17T15:57:12.414237Z"
+  },
+  {
+    "id": "villa-for-sale-ras-al-khaimah-al-marjan-island-danah-bay-16300823",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-al-marjan-island-danah-bay-16300823.html",
+    "title": "~ 14K Mortgage Cashback",
+    "type": "Villa",
+    "location": "Danah Bay, Al Marjan Island, Ras Al Khaimah",
+    "price": 630000014,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 2282,
+    "price_sqft": 276074,
+    "old_price": 650000014,
+    "new_price": 630000014,
+    "drop_aed": 20000000,
+    "drop_pct": 3.1,
+    "detected_at": "2026-03-17T15:57:12.415279Z"
+  }
+]
