@@ -1,5 +1,56 @@
 [
   {
+    "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-address-residences-16121729",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-address-residences-16121729.html",
+    "title": "RESALE AT 40% | FULL SEA VIEW | BUILDING 1",
+    "type": "Apartment",
+    "location": "Address Residences, Al Marjan Island, Ras Al Khaimah",
+    "price": 3850000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 2979,
+    "price_sqft": 1292,
+    "old_price": 4250000,
+    "new_price": 3850000,
+    "drop_aed": 400000,
+    "drop_pct": 9.4,
+    "detected_at": "2026-03-18T07:58:17.380161Z"
+  },
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-address-residences-16122145",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-address-residences-16122145.html",
+    "title": "RESALE AT 40% | SEA VIEW | BUILDING 1",
+    "type": "Apartment",
+    "location": "Address Residences, Al Marjan Island, Ras Al Khaimah",
+    "price": 3500000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 3017,
+    "price_sqft": 1160,
+    "old_price": 3850000,
+    "new_price": 3500000,
+    "drop_aed": 350000,
+    "drop_pct": 9.1,
+    "detected_at": "2026-03-18T07:58:17.380157Z"
+  },
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-address-residences-16122478",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-address-residences-16122478.html",
+    "title": "MARJAN ISLAND VIEW | BUILDING 1 | MID FLOOR",
+    "type": "Apartment",
+    "location": "Address Residences, Al Marjan Island, Ras Al Khaimah",
+    "price": 1700000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 2575,
+    "price_sqft": 660,
+    "old_price": 1850000,
+    "new_price": 1700000,
+    "drop_aed": 150000,
+    "drop_pct": 8.1,
+    "detected_at": "2026-03-18T07:58:17.380154Z"
+  },
+  {
     "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-playa-del-sol-2PmnprEw652",
     "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-playa-del-sol-2PmnprEw652.html",
     "title": "BIG LAYOUT | SEA VIEW | HIGH FLOOR | INVESTOR DEAL",
@@ -14,7 +65,7 @@
     "new_price": 2990000,
     "drop_aed": 210000,
     "drop_pct": 6.6,
-    "detected_at": "2026-03-17T15:57:12.414177Z"
+    "detected_at": "2026-03-18T07:58:17.380076Z"
   },
   {
     "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-rosso-bay-residence-16169215",
@@ -31,7 +82,7 @@
     "new_price": 2000000,
     "drop_aed": 75000,
     "drop_pct": 3.6,
-    "detected_at": "2026-03-17T15:57:12.414237Z"
+    "detected_at": "2026-03-18T07:58:17.380145Z"
   },
   {
     "id": "villa-for-sale-ras-al-khaimah-al-marjan-island-danah-bay-16300823",
@@ -48,6 +99,23 @@
     "new_price": 630000014,
     "drop_aed": 20000000,
     "drop_pct": 3.1,
-    "detected_at": "2026-03-17T15:57:12.415279Z"
+    "detected_at": "2026-03-18T07:58:17.381197Z"
+  },
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-moonstone-residences-interiors-16283811",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-moonstone-residences-interiors-16283811.html",
+    "title": "RESALE BELOW OP | PRIVATE POOL | HIGH FLOOR",
+    "type": "Apartment",
+    "location": "Moonstone Residences Interiors, Al Marjan Island, Ras Al Khaimah",
+    "price": 3400000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 1974,
+    "price_sqft": 1722,
+    "old_price": 3450000,
+    "new_price": 3400000,
+    "drop_aed": 50000,
+    "drop_pct": 1.4,
+    "detected_at": "2026-03-18T07:58:17.380136Z"
   }
 ]
