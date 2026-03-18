@@ -1,5 +1,22 @@
 [
   {
+    "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-bab-al-bahar-kahraman-2Q88qND8oAS",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-bab-al-bahar-kahraman-2Q88qND8oAS.html",
+    "title": "Magnificent Spacious Apartment | Upgraded Kitchen",
+    "type": "Apartment",
+    "location": "Kahraman, Bab Al Bahar, Al Marjan Island, Ras Al Khaimah",
+    "price": 1900000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 1000,
+    "price_sqft": 1900,
+    "old_price": 2100000,
+    "new_price": 1900000,
+    "drop_aed": 200000,
+    "drop_pct": 9.5,
+    "detected_at": "2026-03-18T20:50:00.329078Z"
+  },
+  {
     "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-address-residences-16121729",
     "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-address-residences-16121729.html",
     "title": "RESALE AT 40% | FULL SEA VIEW | BUILDING 1",
@@ -14,7 +31,7 @@
     "new_price": 3850000,
     "drop_aed": 400000,
     "drop_pct": 9.4,
-    "detected_at": "2026-03-18T07:58:17.380161Z"
+    "detected_at": "2026-03-18T20:50:00.328797Z"
   },
   {
     "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-address-residences-16122145",
@@ -31,7 +48,7 @@
     "new_price": 3500000,
     "drop_aed": 350000,
     "drop_pct": 9.1,
-    "detected_at": "2026-03-18T07:58:17.380157Z"
+    "detected_at": "2026-03-18T20:50:00.328794Z"
   },
   {
     "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-address-residences-16122478",
@@ -48,7 +65,7 @@
     "new_price": 1700000,
     "drop_aed": 150000,
     "drop_pct": 8.1,
-    "detected_at": "2026-03-18T07:58:17.380154Z"
+    "detected_at": "2026-03-18T20:50:00.328790Z"
   },
   {
     "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-playa-del-sol-2PmnprEw652",
@@ -65,7 +82,24 @@
     "new_price": 2990000,
     "drop_aed": 210000,
     "drop_pct": 6.6,
-    "detected_at": "2026-03-18T07:58:17.380076Z"
+    "detected_at": "2026-03-18T20:50:00.328732Z"
+  },
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-park-beach-residence-2PCSDS2mPPk",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-park-beach-residence-2PCSDS2mPPk.html",
+    "title": "Stunning Studio|Monthly Payments|Prime Location",
+    "type": "Apartment",
+    "location": "Park Beach Residence, Al Marjan Island, Ras Al Khaimah",
+    "price": 1100000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 2528,
+    "price_sqft": 435,
+    "old_price": 1150000,
+    "new_price": 1100000,
+    "drop_aed": 50000,
+    "drop_pct": 4.3,
+    "detected_at": "2026-03-18T20:50:00.328680Z"
   },
   {
     "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-rosso-bay-residence-16169215",
@@ -82,7 +116,24 @@
     "new_price": 2000000,
     "drop_aed": 75000,
     "drop_pct": 3.6,
-    "detected_at": "2026-03-18T07:58:17.380145Z"
+    "detected_at": "2026-03-18T20:50:00.328783Z"
+  },
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-playa-del-sol-2PnPV266WDg",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-playa-del-sol-2PnPV266WDg.html",
+    "title": "2 Bed + Study | Secondary Off-Plan | Full Seaview",
+    "type": "Apartment",
+    "location": "Playa Del Sol, Al Marjan Island, Ras Al Khaimah",
+    "price": 2999900,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 2375,
+    "price_sqft": 1263,
+    "old_price": 3100000,
+    "new_price": 2999900,
+    "drop_aed": 100100,
+    "drop_pct": 3.2,
+    "detected_at": "2026-03-18T20:50:00.329647Z"
   },
   {
     "id": "villa-for-sale-ras-al-khaimah-al-marjan-island-danah-bay-16300823",
@@ -99,7 +150,7 @@
     "new_price": 630000014,
     "drop_aed": 20000000,
     "drop_pct": 3.1,
-    "detected_at": "2026-03-18T07:58:17.381197Z"
+    "detected_at": "2026-03-18T20:50:00.329755Z"
   },
   {
     "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-moonstone-residences-interiors-16283811",
@@ -116,6 +167,6 @@
     "new_price": 3400000,
     "drop_aed": 50000,
     "drop_pct": 1.4,
-    "detected_at": "2026-03-18T07:58:17.380136Z"
+    "detected_at": "2026-03-18T20:50:00.328775Z"
   }
 ]

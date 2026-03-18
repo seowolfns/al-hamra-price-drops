@@ -14,7 +14,7 @@
     "new_price": 2250000,
     "drop_aed": 250000,
     "drop_pct": 10.0,
-    "detected_at": "2026-03-18T07:52:54.315928Z"
+    "detected_at": "2026-03-18T20:44:45.679607Z"
   },
   {
     "id": "apartment-for-sale-ras-al-khaimah-al-hamra-village-al-hamra-waterfront-2Pks2U7DD04",
@@ -31,7 +31,7 @@
     "new_price": 2048976,
     "drop_aed": 154224,
     "drop_pct": 7.0,
-    "detected_at": "2026-03-18T07:52:54.315285Z"
+    "detected_at": "2026-03-18T20:44:45.678981Z"
   },
   {
     "id": "apartment-for-sale-ras-al-khaimah-al-hamra-village-al-hamra-marina-residences-marina-apartments-b-14026290",
@@ -48,7 +48,7 @@
     "new_price": 2200000,
     "drop_aed": 150000,
     "drop_pct": 6.4,
-    "detected_at": "2026-03-18T07:52:54.315914Z"
+    "detected_at": "2026-03-18T20:44:45.679593Z"
   },
   {
     "id": "townhouse-for-sale-ras-al-khaimah-al-hamra-village-falcon-island-falcon-island-north-2Q5MFBktxVA",
@@ -65,7 +65,24 @@
     "new_price": 2100000,
     "drop_aed": 100000,
     "drop_pct": 4.5,
-    "detected_at": "2026-03-18T07:52:54.314660Z"
+    "detected_at": "2026-03-18T20:44:45.678342Z"
+  },
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-al-hamra-village-royal-breeze-16187350",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-royal-breeze-16187350.html",
+    "title": "3 Bedroom High Floor| Community Living | Hot Deal",
+    "type": "Apartment",
+    "location": "Royal Breeze 4, Royal Breeze, Al Hamra Village, Ras Al Khaimah",
+    "price": 1800000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 695,
+    "price_sqft": 2590,
+    "old_price": 1870000,
+    "new_price": 1800000,
+    "drop_aed": 70000,
+    "drop_pct": 3.7,
+    "detected_at": "2026-03-18T20:44:45.679557Z"
   },
   {
     "id": "apartment-for-sale-ras-al-khaimah-al-hamra-village-royal-breeze-royal-breeze-2-2QAXw2E4Esq",
@@ -82,7 +99,7 @@
     "new_price": 530000,
     "drop_aed": 20000,
     "drop_pct": 3.6,
-    "detected_at": "2026-03-18T07:52:54.314733Z"
+    "detected_at": "2026-03-18T20:44:45.678422Z"
   },
   {
     "id": "townhouse-for-sale-ras-al-khaimah-al-hamra-village-falcon-island-falcon-island-north-16232398",
@@ -99,7 +116,7 @@
     "new_price": 3264000,
     "drop_aed": 103000,
     "drop_pct": 3.1,
-    "detected_at": "2026-03-18T07:52:54.314785Z"
+    "detected_at": "2026-03-18T20:44:45.678483Z"
   },
   {
     "id": "townhouse-for-sale-ras-al-khaimah-al-hamra-village-falcon-island-falcon-island-north-16308165",
@@ -116,7 +133,7 @@
     "new_price": 3265000,
     "drop_aed": 101000,
     "drop_pct": 3.0,
-    "detected_at": "2026-03-18T07:52:54.314752Z"
+    "detected_at": "2026-03-18T20:44:45.678474Z"
   },
   {
     "id": "townhouse-for-sale-ras-al-khaimah-al-hamra-village-falcon-island-falcon-island-north-16275742",
@@ -133,7 +150,7 @@
     "new_price": 3400000,
     "drop_aed": 100000,
     "drop_pct": 2.9,
-    "detected_at": "2026-03-18T07:52:54.314720Z"
+    "detected_at": "2026-03-18T20:44:45.678555Z"
   },
   {
     "id": "apartment-for-sale-ras-al-khaimah-al-hamra-village-royal-breeze-royal-breeze-3-13905469",
@@ -150,7 +167,7 @@
     "new_price": 810000,
     "drop_aed": 20000,
     "drop_pct": 2.4,
-    "detected_at": "2026-03-18T07:52:54.315971Z"
+    "detected_at": "2026-03-18T20:44:45.679651Z"
   },
   {
     "id": "apartment-for-sale-ras-al-khaimah-al-hamra-village-al-hamra-waterfront-16223199",
@@ -167,7 +184,7 @@
     "new_price": 3350000,
     "drop_aed": 50000,
     "drop_pct": 1.5,
-    "detected_at": "2026-03-18T07:52:54.314799Z"
+    "detected_at": "2026-03-18T20:44:45.678496Z"
   },
   {
     "id": "apartment-for-sale-ras-al-khaimah-al-hamra-village-al-hamra-marina-residences-marina-apartments-e-2Q6mcR7B8i0",
@@ -184,7 +201,7 @@
     "new_price": 670000,
     "drop_aed": 10000,
     "drop_pct": 1.5,
-    "detected_at": "2026-03-18T07:52:54.314887Z"
+    "detected_at": "2026-03-18T20:44:45.678580Z"
   },
   {
     "id": "townhouse-for-sale-ras-al-khaimah-al-hamra-village-falcon-island-falcon-island-north-2Q3GxRrbcOG",
@@ -201,6 +218,6 @@
     "new_price": 3145000,
     "drop_aed": 35000,
     "drop_pct": 1.1,
-    "detected_at": "2026-03-18T07:52:54.314634Z"
+    "detected_at": "2026-03-18T20:44:45.678384Z"
   }
 ]

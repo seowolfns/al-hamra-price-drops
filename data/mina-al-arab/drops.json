@@ -14,7 +14,24 @@
     "new_price": 1299999,
     "drop_aed": 250001,
     "drop_pct": 16.1,
-    "detected_at": "2026-03-18T08:03:48.309782Z"
+    "detected_at": "2026-03-18T20:55:11.038936Z"
+  },
+  {
+    "id": "villa-for-sale-ras-al-khaimah-mina-al-arab-malibu-2Q6uG6K07pA",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-mina-al-arab-malibu-2Q6uG6K07pA.html",
+    "title": "Family Living | Unfurnished | Fully Upgraded",
+    "type": "Villa",
+    "location": "Malibu, Mina Al Arab, Ras Al Khaimah",
+    "price": 3200000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 984,
+    "price_sqft": 3252,
+    "old_price": 3500000,
+    "new_price": 3200000,
+    "drop_aed": 300000,
+    "drop_pct": 8.6,
+    "detected_at": "2026-03-18T20:55:11.038878Z"
   },
   {
     "id": "apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bayviews-2Q46IWjPoRc",
@@ -31,7 +48,7 @@
     "new_price": 1200000,
     "drop_aed": 100000,
     "drop_pct": 7.7,
-    "detected_at": "2026-03-18T08:03:48.308416Z"
+    "detected_at": "2026-03-18T20:55:11.037426Z"
   },
   {
     "id": "apartment-for-sale-ras-al-khaimah-mina-al-arab-cape-hayat-16310758",
@@ -48,6 +65,23 @@
     "new_price": 675000,
     "drop_aed": 24000,
     "drop_pct": 3.4,
-    "detected_at": "2026-03-18T08:03:48.309117Z"
+    "detected_at": "2026-03-18T20:55:11.038298Z"
+  },
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-2Q30JygnCEK",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-2Q30JygnCEK.html",
+    "title": "Sunset side I Middle floor I Vacant",
+    "type": "Apartment",
+    "location": "Bay Residences, Hayat Island, Mina Al Arab, Ras Al Khaimah",
+    "price": 1145000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 1382,
+    "price_sqft": 829,
+    "old_price": 1170000,
+    "new_price": 1145000,
+    "drop_aed": 25000,
+    "drop_pct": 2.1,
+    "detected_at": "2026-03-18T20:55:11.037854Z"
   }
 ]
