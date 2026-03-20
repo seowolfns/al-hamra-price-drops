@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-the-beach-house-at-al-marjan-65554845",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-the-beach-house-at-al-marjan-65554845.html",
+    "title": "MUST GO THIS WEEK | OPEN TO OFFERS | 20% BELOW OP",
+    "type": "Apartment",
+    "location": "The Beach House at Al Marjan, Al Marjan Island, Ras Al Khaimah",
+    "price": 3250000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 2843,
+    "price_sqft": 1143,
+    "old_price": 3690000,
+    "new_price": 3250000,
+    "drop_aed": 440000,
+    "drop_pct": 11.9,
+    "detected_at": "2026-03-20T05:03:26.006034Z"
+  },
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-shoreline-by-damac-2PwvRSZw7eK",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-shoreline-by-damac-2PwvRSZw7eK.html",
+    "title": "High floor | Full Sea View | Motivated Seller",
+    "type": "Apartment",
+    "location": "Shoreline by Damac, Al Marjan Island, Ras Al Khaimah",
+    "price": 2999999,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 2403,
+    "price_sqft": 1248,
+    "old_price": 3099999,
+    "new_price": 2999999,
+    "drop_aed": 100000,
+    "drop_pct": 3.2,
+    "detected_at": "2026-03-20T05:03:26.006937Z"
+  }
+]
