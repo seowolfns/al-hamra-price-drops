@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-al-marjan-island-park-beach-residence-16241978",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-park-beach-residence-16241978.html",
+    "title": "3YPHPP | Close to Casino | Premium Layout Studio",
+    "type": "Apartment",
+    "location": "Park Beach Residence, Al Marjan Island, Ras Al Khaimah",
+    "price": 1150000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 2643,
+    "price_sqft": 435,
+    "old_price": 1200000,
+    "new_price": 1150000,
+    "drop_aed": 50000,
+    "drop_pct": 4.2,
+    "detected_at": "2026-03-22T05:08:57.947862Z"
+  }
+]
