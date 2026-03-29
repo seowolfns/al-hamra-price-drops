@@ -1,1 +1,53 @@
-[]
+[
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-67849201",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-67849201.html",
+    "title": "1 BR Apartment | Flexible Payment Plan | Re-sale",
+    "type": "",
+    "location": "",
+    "price": 820000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 0,
+    "price_sqft": 0,
+    "old_price": 890000,
+    "new_price": 820000,
+    "drop_aed": 70000,
+    "drop_pct": 7.9,
+    "detected_at": "2026-03-29T05:33:38.053329Z"
+  },
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-quattro-del-mar-2Q1bCyRmXgW",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-quattro-del-mar-2Q1bCyRmXgW.html",
+    "title": "Corner 1BR Apartment with Full Sea View for Sale, Mina Al Arab",
+    "type": "",
+    "location": "",
+    "price": 1798000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 0,
+    "price_sqft": 0,
+    "old_price": 1900000,
+    "new_price": 1798000,
+    "drop_aed": 102000,
+    "drop_pct": 5.4,
+    "detected_at": "2026-03-29T05:33:38.053804Z"
+  },
+  {
+    "id": "apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-68689634",
+    "url": "https://www.propertyfinder.aehttps://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-68689634.html",
+    "title": "Distress 1BHK Deal | Sea View | Prime Location",
+    "type": "",
+    "location": "",
+    "price": 850000,
+    "beds": 0,
+    "baths": 0,
+    "sqft": 0,
+    "price_sqft": 0,
+    "old_price": 870000,
+    "new_price": 850000,
+    "drop_aed": 20000,
+    "drop_pct": 2.3,
+    "detected_at": "2026-03-29T05:33:38.053247Z"
+  }
+]
