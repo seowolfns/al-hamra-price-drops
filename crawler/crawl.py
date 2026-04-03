@@ -3,20 +3,11 @@
 PropertyFinder price-drop crawler – Al Hamra Village, Al Marjan Island, Mina Al Arab
 Runs via GitHub Actions; commits updated JSON back to the repo.
 
-Parses listing data from __NEXT_DATA__ JSON embedded in the page HTML,
-which is more reliable than CSS selectors that change with site redesigns.
+Uses Playwright (headless Chromium) to bypass AWS WAF bot protection.
+Extracts listing data from __NEXT_DATA__ JSON embedded in the page HTML.
 """
 import json, time, random, os, re, datetime
 from pathlib import Path
-import requests
-
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                  "AppleWebKit/537.36 (KHTML, like Gecko) "
-                  "Chrome/124.0.0.0 Safari/537.36",
-    "Accept-Language": "en-US,en;q=0.9",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-}
 
 LOCATIONS = [
     {"id": "al-hamra",      "name": "Al Hamra Village",  "l": "151", "max_pages": 120},
@@ -26,39 +17,30 @@ LOCATIONS = [
 
 BASE_DIR = Path(__file__).parent.parent / "data"
 
-# Regex to skip listings whose title is just a mortgage/cashback promo with a number
-# e.g. "~ 23K Mortgage Cashback", "Get 50K Mortgage Cashback"
+# Skip listings whose title is just a mortgage/cashback promo with a number
+# e.g. "~ 23K Mortgage Cashback"
 MORTGAGE_TITLE_RE = re.compile(r'^[\W\s]*[\d,]+[KkMm]?\s*(aed\s*)?mortgage', re.IGNORECASE)
 
 
-def fetch_page(session, url, retries=3):
-    for attempt in range(retries):
-        try:
-            r = session.get(url, headers=HEADERS, timeout=30)
-            r.raise_for_status()
-            return r.text
-        except Exception as e:
-            print(f"  Attempt {attempt+1} failed: {e}")
-            time.sleep(5)
-    return None
-
-
-def parse_listings(html):
-    """Extract listings from __NEXT_DATA__ JSON embedded in the page."""
-    match = re.search(r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>', html, re.DOTALL)
+def parse_next_data(html):
+    """Extract listing data from __NEXT_DATA__ JSON embedded in the page."""
+    match = re.search(
+        r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>',
+        html, re.DOTALL
+    )
     if not match:
-        return []
+        return [], None
     try:
         data = json.loads(match.group(1))
-        search_result = data["props"]["pageProps"]["searchResult"]
-        raw_listings = search_result.get("listings", [])
+        sr = data["props"]["pageProps"]["searchResult"]
+        meta = sr.get("meta", {})
+        raw_listings = sr.get("listings", [])
     except (KeyError, json.JSONDecodeError) as e:
         print(f"  Failed to parse __NEXT_DATA__: {e}")
-        return []
+        return [], None
 
     listings = []
     for item in raw_listings:
-        # Only process regular property listings (skip project cards etc.)
         if item.get("listing_type") != "property":
             continue
         prop = item.get("property")
@@ -71,8 +53,6 @@ def parse_listings(html):
                 continue
 
             title = prop.get("title", "").strip()
-
-            # Skip mortgage-promo-only titles (e.g. "~ 23K Mortgage Cashback")
             if MORTGAGE_TITLE_RE.match(title):
                 continue
 
@@ -100,28 +80,15 @@ def parse_listings(html):
                 "price_sqft": price_sqft,
             })
         except Exception as e:
-            print(f"  Parse error on prop {prop.get('id')}: {e}")
-            continue
-    return listings
+            print(f"  Parse error: {e}")
+    return listings, meta
 
 
-def get_page_count(html):
-    """Return total page count from __NEXT_DATA__ meta."""
-    match = re.search(r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>', html, re.DOTALL)
-    if not match:
-        return None
-    try:
-        data = json.loads(match.group(1))
-        meta = data["props"]["pageProps"]["searchResult"]["meta"]
-        return meta.get("page_count")
-    except Exception:
-        return None
-
-
-def crawl_location(session, loc_config):
-    loc_id   = loc_config["id"]
-    loc_name = loc_config["name"]
-    l_param  = loc_config["l"]
+def crawl_location(page, loc_config):
+    """Crawl one location using a Playwright page object."""
+    loc_id    = loc_config["id"]
+    loc_name  = loc_config["name"]
+    l_param   = loc_config["l"]
     max_pages = loc_config["max_pages"]
 
     print(f"\n=== Crawling {loc_name} (l={l_param}) ===")
@@ -142,33 +109,41 @@ def crawl_location(session, loc_config):
 
     new_snapshot = {}
     total_pages  = 0
-    actual_max   = max_pages  # may be updated from page 1 meta
+    actual_max   = max_pages
 
-    for page in range(1, actual_max + 1):
+    for pg in range(1, actual_max + 1):
         url = (f"https://www.propertyfinder.ae/en/search"
-               f"?l={l_param}&c=1&fu=0&ob=np&page={page}")
-        print(f"  Page {page}: {url}")
-        html = fetch_page(session, url)
-        if not html:
-            print(f"  Failed to fetch page {page}, stopping.")
+               f"?l={l_param}&c=1&fu=0&ob=np&page={pg}")
+        print(f"  Page {pg}: {url}")
+
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=60000)
+            # Wait for __NEXT_DATA__ to be present
+            page.wait_for_selector('#__NEXT_DATA__', timeout=30000)
+            html = page.content()
+        except Exception as e:
+            print(f"  Failed to load page {pg}: {e}")
             break
 
-        # On first page, read the true page count from metadata
-        if page == 1:
-            pc = get_page_count(html)
+        listings, meta = parse_next_data(html)
+
+        if pg == 1 and meta:
+            pc = meta.get("page_count")
             if pc:
                 actual_max = min(pc, max_pages)
-                print(f"  Total pages available: {pc} (capped at {actual_max})")
+                total_count = meta.get("total_count", 0)
+                print(f"  Total listings: {total_count}, pages: {pc} (capped at {actual_max})")
 
-        listings = parse_listings(html)
         if not listings:
-            print(f"  No listings on page {page}, done.")
+            print(f"  No listings on page {pg}, done.")
             break
 
         for prop in listings:
             new_snapshot[prop["id"]] = prop
-        total_pages = page
-        time.sleep(random.uniform(1.2, 2.5))
+        total_pages = pg
+
+        # Small delay between pages
+        time.sleep(random.uniform(0.8, 1.5))
 
     print(f"  Crawled {total_pages} pages, {len(new_snapshot)} listings.")
 
@@ -193,7 +168,6 @@ def crawl_location(session, loc_config):
     drops.sort(key=lambda x: x["drop_pct"], reverse=True)
     print(f"  {len(drops)} price drops detected.")
 
-    # Write output
     snapshot_path.write_text(json.dumps(new_snapshot, indent=2))
     drops_path.write_text(json.dumps(drops, indent=2))
     meta_path.write_text(json.dumps({
@@ -208,12 +182,44 @@ def crawl_location(session, loc_config):
 
 
 def main():
-    session = requests.Session()
-    session.headers.update(HEADERS)
-    totals = {}
-    for loc in LOCATIONS:
-        tracked, drops = crawl_location(session, loc)
-        totals[loc["id"]] = {"tracked": tracked, "drops": drops}
+    from playwright.sync_api import sync_playwright
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(
+            headless=True,
+            args=[
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-blink-features=AutomationControlled",
+            ]
+        )
+        context = browser.new_context(
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0.0.0 Safari/537.36"
+            ),
+            locale="en-US",
+            viewport={"width": 1280, "height": 800},
+        )
+        # Mask automation signals
+        context.add_init_script("""
+            Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+        """)
+
+        page = context.new_page()
+
+        # Warm up: visit the homepage first to get WAF cookies
+        print("Warming up browser (getting WAF token)...")
+        page.goto("https://www.propertyfinder.ae/", wait_until="domcontentloaded", timeout=60000)
+        time.sleep(2)
+
+        totals = {}
+        for loc in LOCATIONS:
+            tracked, drops = crawl_location(page, loc)
+            totals[loc["id"]] = {"tracked": tracked, "drops": drops}
+
+        browser.close()
 
     print("\n=== Summary ===")
     for k, v in totals.items():
