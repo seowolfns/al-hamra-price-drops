@@ -117,13 +117,18 @@ def crawl_location(page, loc_config):
         print(f"  Page {pg}: {url}")
 
         try:
-            page.goto(url, wait_until="domcontentloaded", timeout=60000)
-            # Wait for __NEXT_DATA__ script tag to be attached (script tags are never "visible")
-            page.wait_for_selector('#__NEXT_DATA__', state="attached", timeout=30000)
+            page.goto(url, wait_until="networkidle", timeout=60000)
             html = page.content()
         except Exception as e:
             print(f"  Failed to load page {pg}: {e}")
-            break
+            # Try with domcontentloaded as fallback
+            try:
+                page.goto(url, wait_until="domcontentloaded", timeout=60000)
+                time.sleep(2)
+                html = page.content()
+            except Exception as e2:
+                print(f"  Fallback also failed: {e2}")
+                break
 
         listings, meta = parse_next_data(html)
 
@@ -181,6 +186,13 @@ def crawl_location(page, loc_config):
     return len(new_snapshot), len(drops)
 
 
+def warm_up(page):
+    """Visit homepage to get/refresh WAF cookies."""
+    print("Warming up browser (getting WAF token)...")
+    page.goto("https://www.propertyfinder.ae/", wait_until="domcontentloaded", timeout=60000)
+    time.sleep(3)
+
+
 def main():
     from playwright.sync_api import sync_playwright
 
@@ -210,14 +222,15 @@ def main():
         page = context.new_page()
 
         # Warm up: visit the homepage first to get WAF cookies
-        print("Warming up browser (getting WAF token)...")
-        page.goto("https://www.propertyfinder.ae/", wait_until="domcontentloaded", timeout=60000)
-        time.sleep(2)
+        warm_up(page)
 
         totals = {}
         for loc in LOCATIONS:
             tracked, drops = crawl_location(page, loc)
             totals[loc["id"]] = {"tracked": tracked, "drops": drops}
+            # Re-warm between locations to keep WAF token fresh
+            if loc != LOCATIONS[-1]:
+                warm_up(page)
 
         browser.close()
 
