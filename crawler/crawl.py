@@ -84,8 +84,25 @@ def parse_next_data(html):
     return listings, meta
 
 
-def crawl_location(page, loc_config):
-    """Crawl one location using a Playwright page object."""
+def make_context(browser):
+    """Create a fresh browser context with realistic browser settings."""
+    context = browser.new_context(
+        user_agent=(
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/124.0.0.0 Safari/537.36"
+        ),
+        locale="en-US",
+        viewport={"width": 1280, "height": 800},
+    )
+    context.add_init_script("""
+        Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+    """)
+    return context
+
+
+def crawl_location(browser, loc_config):
+    """Crawl one location using a fresh browser context."""
     loc_id = loc_config["id"]
     loc_name = loc_config["name"]
     l_param = loc_config["l"]
@@ -111,6 +128,15 @@ def crawl_location(page, loc_config):
     total_pages = 0
     actual_max = max_pages
 
+    # Fresh context for each location to avoid WAF rate limiting
+    context = make_context(browser)
+    page = context.new_page()
+
+    # Warm up: visit the homepage first to get WAF cookies
+    print("  Warming up browser (getting WAF token)...")
+    page.goto("https://www.propertyfinder.ae/", wait_until="domcontentloaded", timeout=60000)
+    time.sleep(3)
+
     for pg in range(1, actual_max + 1):
         url = (f"https://www.propertyfinder.ae/en/search"
                f"?l={l_param}&c=1&fu=0&ob=np&page={pg}")
@@ -120,15 +146,21 @@ def crawl_location(page, loc_config):
             page.goto(url, wait_until="networkidle", timeout=60000)
             html = page.content()
         except Exception as e:
-            print(f"  Failed to load page {pg}: {e}")
-            # Try with domcontentloaded as fallback
+            print(f"  networkidle timeout on page {pg}: {e}")
+            # Fallback: domcontentloaded + sleep
             try:
                 page.goto(url, wait_until="domcontentloaded", timeout=60000)
-                time.sleep(2)
+                time.sleep(3)
                 html = page.content()
             except Exception as e2:
                 print(f"  Fallback also failed: {e2}")
                 break
+
+        # Debug: check if we got __NEXT_DATA__
+        if '__NEXT_DATA__' not in html:
+            print(f"  WARNING: No __NEXT_DATA__ in response for page {pg}. HTML snippet:")
+            print(f"  {html[:200]}")
+            break
 
         listings, meta = parse_next_data(html)
 
@@ -150,6 +182,7 @@ def crawl_location(page, loc_config):
         # Small delay between pages
         time.sleep(random.uniform(0.8, 1.5))
 
+    context.close()
     print(f"  Crawled {total_pages} pages, {len(new_snapshot)} listings.")
 
     # Detect drops
@@ -186,13 +219,6 @@ def crawl_location(page, loc_config):
     return len(new_snapshot), len(drops)
 
 
-def warm_up(page):
-    """Visit homepage to get/refresh WAF cookies."""
-    print("Warming up browser (getting WAF token)...")
-    page.goto("https://www.propertyfinder.ae/", wait_until="domcontentloaded", timeout=60000)
-    time.sleep(3)
-
-
 def main():
     from playwright.sync_api import sync_playwright
 
@@ -205,32 +231,11 @@ def main():
                 "--disable-blink-features=AutomationControlled",
             ]
         )
-        context = browser.new_context(
-            user_agent=(
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/124.0.0.0 Safari/537.36"
-            ),
-            locale="en-US",
-            viewport={"width": 1280, "height": 800},
-        )
-        # Mask automation signals
-        context.add_init_script("""
-            Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-        """)
-
-        page = context.new_page()
-
-        # Warm up: visit the homepage first to get WAF cookies
-        warm_up(page)
 
         totals = {}
         for loc in LOCATIONS:
-            tracked, drops = crawl_location(page, loc)
+            tracked, drops = crawl_location(browser, loc)
             totals[loc["id"]] = {"tracked": tracked, "drops": drops}
-            # Re-warm between locations to keep WAF token fresh
-            if loc != LOCATIONS[-1]:
-                warm_up(page)
 
         browser.close()
 
