@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>RAK Price Drops · Al Hamra | Marjan Island | Mina Al Arab</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#0d0d0d;color:#e0e0e0;font-family:'Courier New',monospace;font-size:14px;}
+a{color:inherit;text-decoration:none;}
+
+/* Header */
+header{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;border-bottom:1px solid #1e1e1e;background:#0a0a0a;}
+.logo{font-size:18px;font-weight:700;letter-spacing:2px;}
+.logo span{color:#e63232;}
+.live-badge{background:#0d2e0d;color:#22c55e;border:1px solid #22c55e;padding:3px 10px;border-radius:3px;font-size:11px;letter-spacing:1px;}
+.meta-info{font-size:11px;color:#555;text-align:right;}
+
+/* Location tabs */
+.loc-tabs{display:flex;gap:0;border-bottom:2px solid #1e1e1e;background:#0a0a0a;padding:0 24px;}
+.loc-tab{padding:12px 22px;cursor:pointer;font-size:13px;font-family:inherit;letter-spacing:1px;background:none;border:none;color:#555;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .2s;}
+.loc-tab:hover{color:#ccc;}
+.loc-tab.active{color:#e63232;border-bottom-color:#e63232;}
+
+/* Stats bar */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #1a1a1a;}
+.stat{padding:18px 24px;border-right:1px solid #1a1a1a;text-align:center;}
+.stat:last-child{border-right:none;}
+.stat-val{font-size:28px;font-weight:700;color:#e63232;}
+.stat-lbl{font-size:10px;color:#444;letter-spacing:2px;margin-top:4px;}
+
+/* Filters */
+.filters{display:flex;align-items:center;gap:12px;padding:12px 24px;border-bottom:1px solid #1a1a1a;flex-wrap:wrap;}
+.filter-group{display:flex;gap:8px;align-items:center;}
+.filter-label{font-size:11px;color:#555;letter-spacing:1px;}
+.filter-btn{background:none;border:1px solid #2a2a2a;color:#666;padding:6px 14px;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:1px;transition:all .15s;}
+.filter-btn:hover{border-color:#555;color:#ccc;}
+.filter-btn.active{background:#e63232;border-color:#e63232;color:#fff;}
+.filter-input{background:#111;border:1px solid #2a2a2a;color:#ccc;padding:6px 10px;width:60px;font-family:inherit;font-size:12px;text-align:center;}
+.filter-input:focus{outline:none;border-color:#e63232;}
+select.sort-select{background:#111;border:1px solid #2a2a2a;color:#ccc;padding:6px 12px;font-family:inherit;font-size:12px;cursor:pointer;}
+select.sort-select:focus{outline:none;border-color:#e63232;}
+.refresh-btn{margin-left:auto;background:none;border:1px solid #2a2a2a;color:#555;padding:6px 16px;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:1px;transition:all .2s;}
+.refresh-btn:hover{border-color:#e63232;color:#e63232;}
+
+/* Terminal log */
+.log{padding:8px 24px;font-size:11px;color:#22c55e;background:#050505;border-bottom:1px solid #111;min-height:28px;}
+
+/* Count header */
+.count-header{padding:10px 24px;font-size:11px;color:#444;letter-spacing:2px;border-bottom:1px solid #111;}
+
+/* Drop grid */
+.drops-grid{padding:16px 24px;display:flex;flex-direction:column;gap:8px;}
+
+.drop-card{display:grid;grid-template-columns:40px 1fr auto;gap:0;border:1px solid #1a1a1a;background:#0d0d0d;transition:border-color .15s;}
+.drop-card:hover{border-color:#2a2a2a;}
+
+.rank{display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:#1e1e1e;border-right:1px solid #1a1a1a;padding:0 12px;min-width:50px;}
+
+.drop-info{padding:12px 16px;}
+.drop-type{font-size:10px;color:#555;letter-spacing:2px;margin-bottom:4px;}
+.drop-title{font-size:13px;color:#ccc;margin-bottom:6px;line-height:1.4;}
+.drop-details{display:flex;gap:16px;font-size:11px;color:#444;}
+.drop-detail{display:flex;gap:4px;align-items:center;}
+
+.drop-price{padding:12px 20px;text-align:right;display:flex;flex-direction:column;justify-content:center;gap:4px;border-left:1px solid #1a1a1a;}
+.price-old{font-size:11px;color:#444;text-decoration:line-through;}
+.price-new{font-size:15px;font-weight:700;color:#e0e0e0;}
+.price-drop-aed{font-size:11px;color:#e63232;}
+.price-drop-pct{font-size:22px;font-weight:700;color:#e63232;}
+
+/* Empty state */
+.empty{text-align:center;padding:80px 24px;color:#333;}
+.empty-icon{font-size:48px;margin-bottom:16px;}
+.empty-msg{font-size:14px;letter-spacing:1px;}
+
+/* Footer */
+footer{padding:24px;border-top:1px solid #111;text-align:center;color:#333;font-size:11px;display:flex;gap:24px;justify-content:center;}
+footer a{color:#444;}
+footer a:hover{color:#888;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">&#127  RAK <span>PRICE</span> DROPS</div>
+  <div class="live-badge">&#9679 LIVE DATA</div>
+  <div class="meta-info">
+    Last scan: <span id="last-scan">–</span><br>
+    <span id="listings-count">0</span> listings tracked
+  </div>
+</header>
+
+<!-- Location Tabs -->
+<div class="loc-tabs">
+  <button class="loc-tab active" data-loc="al-hamra">AL HAMRA VILLAGE</button>
+  <button class="loc-tab" data-loc="marjan-island">AL MARJAN ISLAND</button>
+  <button class="loc-tab" data-loc="mina-al-arab">MINA AL ARAB</button>
+</div>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="stat"><div class="stat-val" id="stat-drops">0</div><div class="stat-lbl">DROPS FOUND</div></div>
+  <div class="stat"><div class="stat-val" id="stat-avg">–</div><div class="stat-lbl">AVG DROP %</div></div>
+  <div class="stat"><div class="stat-val" id="stat-biggest">–</div><div class="stat-lbl">BIGGEST DROP</div></div>
+  <div class="stat"><div class="stat-val" id="stat-total-aed">–</div><div class="stat-lbl">TOTAL DROPPED (AED)</div></div>
+</div>
+
+<!-- Filters -->
+<div class="filters">
+  <span class="filter-label">TYPE:</span>
+  <div class="filter-group" id="type-filters">
+    <button class="filter-btn active" data-type="all">All</button>
+    <button class="filter-btn" data-type="apartment">Apartments</button>
+    <button class="filter-btn" data-type="villa">Villas</button>
+    <button class="filter-btn" data-type="townhouse">Townhouses</button>
+    <button class="filter-btn" data-type="penthouse">Penthouses</button>
+  </div>
+  <span class="filter-label">MIN DROP:</span>
+  <input class="filter-input" type="number" id="min-drop" value="3" min="0" max="99">
+  <span class="filter-label">%</span>
+  <span class="filter-label">SORT:</span>
+  <select class="sort-select" id="sort-by">
+    <option value="pct">Biggest % Drop</option>
+    <option value="aed">Biggest AED Drop</option>
+    <option value="recent">Most Recent</option>
+    <option value="price">Lowest Price</option>
+  </select>
+  <button class="refresh-btn" id="refresh-btn">&#8635 REFRESH</button>
+</div>
+
+<div class="log" id="log-line">&gt; Loading...</div>
+<div class="count-header"><span id="drop-count">0</span> PRICE DROPS DETECTED</div>
+
+<div class="drops-grid" id="drops-grid">
+  <div class="empty">
+    <div class="empty-icon">&#128269</div>
+    <div class="empty-msg">No data yet. Run the crawler at least twice.</div>
+  </div>
+</div>
+
+<footer>
+  <a href="#">&#9658 HOW IT WORKS</a>
+  <a href="https://www.propertyfinder.ae" target="_blank">&#9658 VIEW ON PROPERTYFINDER</a>
+  <a href="https://github.com/seowolfns/al-hamra-price-drops" target="_blank">&#9658 GITHUB REPO</a>
+</footer>
+<div style="text-align:center;padding:8px;color:#222;font-size:10px;border-top:1px solid #111;">
+  Data updated daily by GitHub Actions &middot; Source: propertyfinder.ae
+</div>
+
+<script>
+const LOCATIONS = {
+  'al-hamra':      { name: 'Al Hamra Village',  dataPath: 'data/al-hamra/' },
+  'marjan-island': { name: 'Al Marjan Island',  dataPath: 'data/marjan-island/' },
+  'mina-al-arab':  { name: 'Mina Al Arab',      dataPath: 'data/mina-al-arab/' },
+};
+
+let currentLoc   = 'al-hamra';
+let allDrops     = [];
+let activeType   = 'all';
+
+function fmt(n) {
+  if (n >= 1e6) return (n/1e6).toFixed(1) + 'M';
+  if (n >= 1e3) return (n/1e3).toFixed(0) + 'K';
+  return n.toString();
+}
+
+function fmtAED(n) {
+  return 'AED ' + Number(n).toLocaleString('en-US');
+}
+
+async function loadData(locId) {
+  const path = LOCATIONS[locId].dataPath;
+  try {
+    const [dropsResp, metaResp] = await Promise.all([
+      fetch(path + 'drops.json?v=' + Date.now()),
+      fetch(path + 'meta.json?v=' + Date.now()),
+    ]);
+    const drops = await dropsResp.json();
+    const meta  = await metaResp.json();
+    return { drops, meta };
+  } catch(e) {
+    return { drops: [], meta: {} };
+  }
+}
+
+function getFilteredDrops() {
+  const minDrop = parseFloat(document.getElementById('min-drop').value) || 0;
+  let filtered = allDrops.filter(d => d.drop_pct >= minDrop);
+  if (activeType !== 'all') {
+    filtered = filtered.filter(d =>
+      (d.type || '').toLowerCase().includes(activeType)
+    );
+  }
+  const sortBy = document.getElementById('sort-by').value;
+  if (sortBy === 'pct')    filtered.sort((a,b) => b.drop_pct - a.drop_pct);
+  if (sortBy === 'aed')    filtered.sort((a,b) => b.drop_aed - a.drop_aed);
+  if (sortBy === 'recent') filtered.sort((a,b) => (b.detected_at||'').localeCompare(a.detected_at||''));
+  if (sortBy === 'price')  filtered.sort((a,b) => a.new_price - b.new_price);
+  return filtered;
+}
+
+function renderStats(drops) {
+  document.getElementById('stat-drops').textContent = drops.length;
+  if (drops.length === 0) {
+    document.getElementById('stat-avg').textContent = '–';
+    document.getElementById('stat-biggest').textContent = '–';
+    document.getElementById('stat-total-aed').textContent = '–';
+    return;
+  }
+  const avgPct = (drops.reduce((s,d) => s + d.drop_pct, 0) / drops.length).toFixed(1);
+  const biggestPct = Math.max(...drops.map(d => d.drop_pct)).toFixed(1);
+  const totalAed = drops.reduce((s,d) => s + d.drop_aed, 0);
+  document.getElementById('stat-avg').textContent = avgPct + '%';
+  document.getElementById('stat-biggest').textContent = biggestPct + '%';
+  document.getElementById('stat-total-aed').textContent = fmt(totalAed);
+}
+
+function renderCards(drops) {
+  const grid = document.getElementById('drops-grid');
+  document.getElementById('drop-count').textContent = drops.length;
+  if (drops.length === 0) {
+    grid.innerHTML = '<div class="empty"><div class="empty-icon">&#128269</div><div class="empty-msg">No drops match your filters. Try lowering the min drop % or selecting a different type.</div></div>';
+    return;
+  }
+  grid.innerHTML = drops.map((d,i) => {
+    const beds  = d.beds  ? d.beds + ' bed'  : '';
+    const baths = d.baths ? d.baths + ' bath': '';
+    const sqft  = d.sqft  ? d.sqft.toLocaleString() + ' sqft' : '';
+    const psqft = d.price_sqft ? 'AED ' + d.price_sqft.toLocaleString() + '/sqft' : '';
+    const details = [beds, baths, sqft, psqft].filter(Boolean).join('  ·  ');
+    return '<a class="drop-card" href="' + d.url + '" target="_blank">' +
+      '<div class="rank">' + (i+1) + '</div>' +
+      '<div class="drop-info">' +
+        '<div class="drop-type">' + (d.type||'').toUpperCase() + '</div>' +
+        '<div class="drop-title">' + (d.title||d.location||'') + '</div>' +
+        '<div class="drop-details">' + details + '</div>' +
+      '</div>' +
+      '<div class="drop-price">' +
+        '<div class="price-old">' + fmtAED(d.old_price) + '</div>' +
+        '<div class="price-new">' + fmtAED(d.new_price) + '</div>' +
+        '<div class="price-drop-aed">&#9660 AED ' + d.drop_aed.toLocaleString() + '</div>' +
+        '<div class="price-drop-pct">&#9660 ' + d.drop_pct + '%</div>' +
+      '</div>' +
+    '</a>';
+  }).join('');
+}
+
+function updateDisplay() {
+  const filtered = getFilteredDrops();
+  renderStats(filtered);
+  renderCards(filtered);
+}
+
+async function switchLocation(locId) {
+  currentLoc = locId;
+  document.querySelectorAll('.loc-tab').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.loc === locId);
+  });
+  const locName = LOCATIONS[locId].name;
+  document.getElementById('log-line').textContent = '> Loading ' + locName + '...';
+  document.getElementById('listings-count').textContent = '0';
+  document.getElementById('last-scan').textContent = '–';
+  allDrops = [];
+  updateDisplay();
+
+  const { drops, meta } = await loadData(locId);
+  allDrops = drops || [];
+  document.getElementById('listings-count').textContent = (meta.listings_tracked || 0).toLocaleString();
+  if (meta.last_run) {
+    const d = new Date(meta.last_run);
+    document.getElementById('last-scan').textContent = d.toLocaleDateString('en-GB', {day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'});
+  }
+  document.getElementById('log-line').textContent = '> Loaded. ' + allDrops.length + ' price drops tracked for ' + locName + '.';
+  updateDisplay();
+}
+
+// Event listeners
+document.querySelectorAll('.loc-tab').forEach(btn => {
+  btn.addEventListener('click', () => switchLocation(btn.dataset.loc));
+});
+document.querySelectorAll('#type-filters .filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#type-filters .filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeType = btn.dataset.type;
+    updateDisplay();
+  });
+});
+document.getElementById('min-drop').addEventListener('input', updateDisplay);
+document.getElementById('sort-by').addEventListener('change', updateDisplay);
+document.getElementById('refresh-btn').addEventListener('click', () => switchLocation(currentLoc));
+
+// Initial load
+switchLocation('al-hamra');
+</script>
+</body>
+</html>
