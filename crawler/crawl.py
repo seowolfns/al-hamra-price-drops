@@ -10,9 +10,9 @@ import json, time, random, os, re, datetime
 from pathlib import Path
 
 LOCATIONS = [
-    {"id": "al-hamra",      "name": "Al Hamra Village",  "l": "151", "max_pages": 120},
-    {"id": "marjan-island", "name": "Al Marjan Island",   "l": "152", "max_pages": 120},
-    {"id": "mina-al-arab",  "name": "Mina Al Arab",       "l": "156", "max_pages": 120},
+    {"id": "al-hamra", "name": "Al Hamra Village", "l": "151", "max_pages": 120},
+    {"id": "marjan-island", "name": "Al Marjan Island", "l": "152", "max_pages": 120},
+    {"id": "mina-al-arab", "name": "Mina Al Arab", "l": "156", "max_pages": 120},
 ]
 
 BASE_DIR = Path(__file__).parent.parent / "data"
@@ -86,9 +86,9 @@ def parse_next_data(html):
 
 def crawl_location(page, loc_config):
     """Crawl one location using a Playwright page object."""
-    loc_id    = loc_config["id"]
-    loc_name  = loc_config["name"]
-    l_param   = loc_config["l"]
+    loc_id = loc_config["id"]
+    loc_name = loc_config["name"]
+    l_param = loc_config["l"]
     max_pages = loc_config["max_pages"]
 
     print(f"\n=== Crawling {loc_name} (l={l_param}) ===")
@@ -97,8 +97,8 @@ def crawl_location(page, loc_config):
     data_dir.mkdir(parents=True, exist_ok=True)
 
     snapshot_path = data_dir / "snapshot.json"
-    drops_path    = data_dir / "drops.json"
-    meta_path     = data_dir / "meta.json"
+    drops_path = data_dir / "drops.json"
+    meta_path = data_dir / "meta.json"
 
     old_snapshot = {}
     if snapshot_path.exists():
@@ -108,8 +108,8 @@ def crawl_location(page, loc_config):
             pass
 
     new_snapshot = {}
-    total_pages  = 0
-    actual_max   = max_pages
+    total_pages = 0
+    actual_max = max_pages
 
     for pg in range(1, actual_max + 1):
         url = (f"https://www.propertyfinder.ae/en/search"
@@ -118,8 +118,8 @@ def crawl_location(page, loc_config):
 
         try:
             page.goto(url, wait_until="domcontentloaded", timeout=60000)
-            # Wait for __NEXT_DATA__ to be present
-            page.wait_for_selector('#__NEXT_DATA__', timeout=30000)
+            # Wait for __NEXT_DATA__ script tag to be attached (script tags are never "visible")
+            page.wait_for_selector('#__NEXT_DATA__', state="attached", timeout=30000)
             html = page.content()
         except Exception as e:
             print(f"  Failed to load page {pg}: {e}")
@@ -131,8 +131,8 @@ def crawl_location(page, loc_config):
             pc = meta.get("page_count")
             if pc:
                 actual_max = min(pc, max_pages)
-                total_count = meta.get("total_count", 0)
-                print(f"  Total listings: {total_count}, pages: {pc} (capped at {actual_max})")
+            total_count = meta.get("total_count", 0)
+            print(f"  Total listings: {total_count}, pages: {pc} (capped at {actual_max})")
 
         if not listings:
             print(f"  No listings on page {pg}, done.")
@@ -161,8 +161,8 @@ def crawl_location(page, loc_config):
                         **new_prop,
                         "old_price": old_price,
                         "new_price": new_price,
-                        "drop_aed":  drop_aed,
-                        "drop_pct":  drop_pct,
+                        "drop_aed": drop_aed,
+                        "drop_pct": drop_pct,
                         "detected_at": datetime.datetime.utcnow().isoformat() + "Z",
                     })
     drops.sort(key=lambda x: x["drop_pct"], reverse=True)
