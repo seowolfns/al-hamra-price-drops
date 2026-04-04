@@ -24,7 +24,10 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Install Playwright browser
-      run: playwright install chromium --with-deps
+      run: python -m playwright install chromium
+
+    - name: Install system dependencies for Playwright
+      run: sudo apt-get install -y libnss3 libatk-bridge2.0-0 libdrm2 libxkbcommon0 libgbm1 libasound2t64
 
     - name: Run crawler (all 3 locations)
       run: python crawler/crawl.py
