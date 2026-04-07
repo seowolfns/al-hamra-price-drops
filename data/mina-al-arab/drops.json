@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "70675776",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-mina-al-arab-marbella-70675776.html",
+    "title": "Great Location| Amazing Price | Amazing Deal",
+    "type": "Townhouse",
+    "location": "Marbella, Mina Al Arab, Ras Al Khaimah",
+    "price": 2250000,
+    "beds": "3",
+    "baths": "4",
+    "sqft": 2550,
+    "price_sqft": 882,
+    "old_price": 2700000,
+    "new_price": 2250000,
+    "drop_aed": 450000,
+    "drop_pct": 16.7,
+    "detected_at": "2026-04-07T07:57:48.940251Z"
+  }
+]
