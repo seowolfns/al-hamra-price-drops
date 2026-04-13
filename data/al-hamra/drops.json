@@ -1,19 +1,19 @@
 [
   {
-    "id": "57755833",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-al-hamra-village-al-hamra-village-villas-2PkwzDeSdXe.html",
-    "title": "Waterfront 5 Bed Villa | Ultra Luxurious Upgrade",
-    "type": "Villa",
-    "location": "Al Hamra Village Villas, Al Hamra Village, Ras Al Khaimah",
-    "price": 26000000,
-    "beds": "5",
-    "baths": "6",
-    "sqft": 13995,
-    "price_sqft": 1857,
-    "old_price": 27000000,
-    "new_price": 26000000,
-    "drop_aed": 1000000,
-    "drop_pct": 3.7,
-    "detected_at": "2026-04-12T05:35:14.436066Z"
+    "id": "67819227",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-al-hamra-marina-residences-marina-apartments-f-67819227.html",
+    "title": "Stunning Studio - Furnished - Upgraded",
+    "type": "Apartment",
+    "location": "Marina Apartments F, Al Hamra Marina Residences, Al Hamra Village, Ras Al Khaimah",
+    "price": 565000,
+    "beds": "studio",
+    "baths": "1",
+    "sqft": 600,
+    "price_sqft": 941,
+    "old_price": 600000,
+    "new_price": 565000,
+    "drop_aed": 35000,
+    "drop_pct": 5.8,
+    "detected_at": "2026-04-13T05:42:27.795313Z"
   }
 ]
