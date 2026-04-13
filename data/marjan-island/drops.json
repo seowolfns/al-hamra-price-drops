@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "16021367",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-al-marjan-island-danah-bay-16021367.html",
+    "title": "Townhouses With Rooftop Terraces",
+    "type": "Townhouse",
+    "location": "Danah Bay, Al Marjan Island, Ras Al Khaimah",
+    "price": 3100000,
+    "beds": "2",
+    "baths": "2",
+    "sqft": 2450,
+    "price_sqft": 1265,
+    "old_price": 3500000,
+    "new_price": 3100000,
+    "drop_aed": 400000,
+    "drop_pct": 11.4,
+    "detected_at": "2026-04-13T06:40:38.181945Z"
+  },
+  {
+    "id": "66695881",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-al-marjan-island-danah-bay-66695881.html",
+    "title": "4 Master Room + Maid room - Prime Location",
+    "type": "Townhouse",
+    "location": "Danah Bay, Al Marjan Island, Ras Al Khaimah",
+    "price": 6300000,
+    "beds": "4",
+    "baths": "5",
+    "sqft": 3889,
+    "price_sqft": 1619,
+    "old_price": 6500000,
+    "new_price": 6300000,
+    "drop_aed": 200000,
+    "drop_pct": 3.1,
+    "detected_at": "2026-04-13T06:40:38.181861Z"
+  }
+]
