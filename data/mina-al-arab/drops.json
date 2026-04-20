@@ -1,1 +1,53 @@
-[]
+[
+  {
+    "id": "77776225",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-mina-al-arab-marbella-marbella-ii-villas-77776225.html",
+    "title": "Beautifully Furnished | Great Investment",
+    "type": "Villa",
+    "location": "Marbella II Villas, Marbella, Mina Al Arab, Ras Al Khaimah",
+    "price": 2300000,
+    "beds": "2",
+    "baths": "4",
+    "sqft": 1928,
+    "price_sqft": 1192,
+    "old_price": 2499000,
+    "new_price": 2300000,
+    "drop_aed": 199000,
+    "drop_pct": 8.0,
+    "detected_at": "2026-04-20T07:40:57.229154Z"
+  },
+  {
+    "id": "76562971",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-mina-al-arab-malibu-76562971.html",
+    "title": "3BR+Maid Malibu Villa for Sale - Lowest Price",
+    "type": "Villa",
+    "location": "Malibu, Mina Al Arab, Ras Al Khaimah",
+    "price": 3025000,
+    "beds": "3",
+    "baths": "5",
+    "sqft": 3250,
+    "price_sqft": 930,
+    "old_price": 3200000,
+    "new_price": 3025000,
+    "drop_aed": 175000,
+    "drop_pct": 5.5,
+    "detected_at": "2026-04-20T07:40:57.228969Z"
+  },
+  {
+    "id": "77376194",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-the-lagoons-lagoon-b16-77376194.html",
+    "title": "Serious Buyers Only l Studio The Lagoon l Upgraded",
+    "type": "Apartment",
+    "location": "Lagoon B16, The Lagoons, Mina Al Arab, Ras Al Khaimah",
+    "price": 379999,
+    "beds": "studio",
+    "baths": "1",
+    "sqft": 330,
+    "price_sqft": 1151,
+    "old_price": 385000,
+    "new_price": 379999,
+    "drop_aed": 5001,
+    "drop_pct": 1.3,
+    "detected_at": "2026-04-20T07:40:57.229020Z"
+  }
+]
