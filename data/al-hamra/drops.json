@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "71495242",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-royal-breeze-71495242.html",
+    "title": "Urgent Sale | Casino View | Big Type Studio",
+    "type": "Apartment",
+    "location": "Royal Breeze, Al Hamra Village, Ras Al Khaimah",
+    "price": 550000,
+    "beds": "studio",
+    "baths": "1",
+    "sqft": 598,
+    "price_sqft": 919,
+    "old_price": 590000,
+    "new_price": 550000,
+    "drop_aed": 40000,
+    "drop_pct": 6.8,
+    "detected_at": "2026-04-25T04:56:30.903260Z"
+  },
+  {
+    "id": "67845469",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-royal-breeze-royal-breeze-2-67845469.html",
+    "title": "One Bedroom For Sale in Al Hamra - Amazing Full Sea View - High Floor",
+    "type": "Apartment",
+    "location": "Royal breeze 2, Royal Breeze, Al Hamra Village, Ras Al Khaimah",
+    "price": 739000,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 696,
+    "price_sqft": 1061,
+    "old_price": 755000,
+    "new_price": 739000,
+    "drop_aed": 16000,
+    "drop_pct": 2.1,
+    "detected_at": "2026-04-25T04:56:30.903724Z"
+  }
+]
