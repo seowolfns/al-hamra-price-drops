@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "16139035",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-pacific-pacific-tonga-16139035.html",
+    "title": "SEA VIEW - MODERN FURNISHED 1BR - GREAT INVESTMENT",
+    "type": "Apartment",
+    "location": "Pacific Tonga, Pacific, Al Marjan Island, Ras Al Khaimah",
+    "price": 924995,
+    "beds": "1",
+    "baths": "2",
+    "sqft": 773,
+    "price_sqft": 1196,
+    "old_price": 949995,
+    "new_price": 924995,
+    "drop_aed": 25000,
+    "drop_pct": 2.6,
+    "detected_at": "2026-04-27T06:18:34.753233Z"
+  }
+]

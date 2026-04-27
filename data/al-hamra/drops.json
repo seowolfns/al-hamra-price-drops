@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "16337776",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-golf-apartments-16337776.html",
+    "title": "Lagoon View Studio | Golf | High ROI",
+    "type": "Apartment",
+    "location": "Golf Apartments, Al Hamra Village, Ras Al Khaimah",
+    "price": 500000,
+    "beds": "studio",
+    "baths": "1",
+    "sqft": 680,
+    "price_sqft": 735,
+    "old_price": 550000,
+    "new_price": 500000,
+    "drop_aed": 50000,
+    "drop_pct": 9.1,
+    "detected_at": "2026-04-27T05:49:45.940104Z"
+  }
+]
