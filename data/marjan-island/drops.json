@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "77780698",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-pacific-pacific-bora-bora-77780698.html",
+    "title": "Cheapest Unit | Next to Sea | Vacant and Ready",
+    "type": "Apartment",
+    "location": "Pacific Bora Bora, Pacific, Al Marjan Island, Ras Al Khaimah",
+    "price": 1040000,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 992,
+    "price_sqft": 1048,
+    "old_price": 1070000,
+    "new_price": 1040000,
+    "drop_aed": 30000,
+    "drop_pct": 2.8,
+    "detected_at": "2026-05-01T06:27:19.631339Z"
+  }
+]
