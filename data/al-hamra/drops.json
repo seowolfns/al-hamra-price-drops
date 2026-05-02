@@ -1,19 +1,19 @@
 [
   {
-    "id": "82782512",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-al-hamra-marina-residences-marina-apartments-b-82782512.html",
-    "title": "2BR Marina | For Sell | Big Size |Al Hamra Village",
-    "type": "Apartment",
-    "location": "Marina Apartments B, Al Hamra Marina Residences, Al Hamra Village, Ras Al Khaimah",
-    "price": 1700000,
-    "beds": "2",
-    "baths": "2",
-    "sqft": 2262,
-    "price_sqft": 751,
-    "old_price": 1900000,
-    "new_price": 1700000,
-    "drop_aed": 200000,
-    "drop_pct": 10.5,
-    "detected_at": "2026-05-01T06:03:13.092035Z"
+    "id": "67823561",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/duplex-for-sale-ras-al-khaimah-al-hamra-village-al-hamra-village-villas-67823561.html",
+    "title": "Hot Offer | Exclusive Deal | Comfortable Living",
+    "type": "Duplex",
+    "location": "Al Hamra Village Villas, Al Hamra Village, Ras Al Khaimah",
+    "price": 4590000,
+    "beds": "4",
+    "baths": "5",
+    "sqft": 4000,
+    "price_sqft": 1147,
+    "old_price": 4700000,
+    "new_price": 4590000,
+    "drop_aed": 110000,
+    "drop_pct": 2.3,
+    "detected_at": "2026-05-02T05:42:51.647516Z"
   }
 ]
