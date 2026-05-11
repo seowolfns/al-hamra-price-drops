@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "74235068",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-mina-al-arab-malibu-74235068.html",
+    "title": "Modified 3 Bedroom Malibu Villa-Private Location",
+    "type": "Villa",
+    "location": "Malibu, Mina Al Arab, Ras Al Khaimah",
+    "price": 2950000,
+    "beds": "3",
+    "baths": "4",
+    "sqft": 3400,
+    "price_sqft": 867,
+    "old_price": 3060000,
+    "new_price": 2950000,
+    "drop_aed": 110000,
+    "drop_pct": 3.6,
+    "detected_at": "2026-05-11T07:18:21.438731Z"
+  }
+]

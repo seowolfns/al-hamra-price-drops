@@ -1,36 +1,19 @@
 [
   {
-    "id": "85743978",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-al-hamra-village-the-townhouses-at-al-hamra-village-85743978.html",
-    "title": "Unfurnished 3BR Villa | Al Hamra Village",
+    "id": "79421230",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-al-hamra-village-the-townhouses-at-al-hamra-village-79421230.html",
+    "title": "Lowest Priced TH | 3 BHK | Al Hamra Village",
     "type": "Townhouse",
     "location": "The Townhouses at Al Hamra Village, Al Hamra Village, Ras Al Khaimah",
-    "price": 1887000,
+    "price": 1850000,
     "beds": "3",
-    "baths": "3",
+    "baths": "4",
     "sqft": 2700,
-    "price_sqft": 698,
+    "price_sqft": 685,
     "old_price": 2000000,
-    "new_price": 1887000,
-    "drop_aed": 113000,
-    "drop_pct": 5.7,
-    "detected_at": "2026-05-10T05:57:52.176164Z"
-  },
-  {
-    "id": "16159455",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-royal-breeze-royal-breeze-4-16159455.html",
-    "title": "Spacious Area UnFurnished | Good Investment",
-    "type": "Apartment",
-    "location": "Royal Breeze 4, Royal Breeze, Al Hamra Village, Ras Al Khaimah",
-    "price": 699999,
-    "beds": "1",
-    "baths": "1",
-    "sqft": 730,
-    "price_sqft": 958,
-    "old_price": 729000,
-    "new_price": 699999,
-    "drop_aed": 29001,
-    "drop_pct": 4.0,
-    "detected_at": "2026-05-10T05:57:52.176134Z"
+    "new_price": 1850000,
+    "drop_aed": 150000,
+    "drop_pct": 7.5,
+    "detected_at": "2026-05-11T06:21:21.951255Z"
   }
 ]

@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "16248462",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-pacific-pacific-samoa-16248462.html",
+    "title": "Prime Investment , sea view ready to move",
+    "type": "Apartment",
+    "location": "Pacific Samoa, Pacific, Al Marjan Island, Ras Al Khaimah",
+    "price": 620000,
+    "beds": "studio",
+    "baths": "1",
+    "sqft": 445,
+    "price_sqft": 1393,
+    "old_price": 670000,
+    "new_price": 620000,
+    "drop_aed": 50000,
+    "drop_pct": 7.5,
+    "detected_at": "2026-05-11T06:52:17.882087Z"
+  },
+  {
+    "id": "15370060",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-the-beach-residences-at-al-marjan-15370060.html",
+    "title": "Selling Below OP | Sea View | High Floor",
+    "type": "Apartment",
+    "location": "The Beach Residences at Al Marjan, Al Marjan Island, Ras Al Khaimah",
+    "price": 1190000,
+    "beds": "studio",
+    "baths": "1",
+    "sqft": 665,
+    "price_sqft": 1789,
+    "old_price": 1235000,
+    "new_price": 1190000,
+    "drop_aed": 45000,
+    "drop_pct": 3.6,
+    "detected_at": "2026-05-11T06:52:17.881864Z"
+  }
+]
