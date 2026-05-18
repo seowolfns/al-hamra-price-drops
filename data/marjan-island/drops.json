@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "82784126",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-trio-isle-82784126.html",
+    "title": "Genuine Resale 1BR  | High Floor Sea View",
+    "type": "Apartment",
+    "location": "Trio Isle, Al Marjan Island, Ras Al Khaimah",
+    "price": 2025000,
+    "beds": "1",
+    "baths": "2",
+    "sqft": 663,
+    "price_sqft": 3054,
+    "old_price": 2100000,
+    "new_price": 2025000,
+    "drop_aed": 75000,
+    "drop_pct": 3.6,
+    "detected_at": "2026-05-18T06:50:33.533674Z"
+  }
+]

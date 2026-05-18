@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "87449979",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/bulk-sale-unit-for-sale-ras-al-khaimah-mina-al-arab-freish-al-siyabi-building-87449979.html",
+    "title": "Factory for sale in Ras Al Khaimah - 160,000 sq ft",
+    "type": "Bulk Sale Unit",
+    "location": "Freish Al Siyabi Building, Mina Al Arab, Ras Al Khaimah",
+    "price": 40000000,
+    "beds": 0,
+    "baths": "7+",
+    "sqft": 160293,
+    "price_sqft": 249,
+    "old_price": 110000000,
+    "new_price": 40000000,
+    "drop_aed": 70000000,
+    "drop_pct": 63.6,
+    "detected_at": "2026-05-18T07:09:48.840592Z"
+  }
+]
