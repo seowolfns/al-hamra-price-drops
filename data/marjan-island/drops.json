@@ -1,1 +1,53 @@
-[]
+[
+  {
+    "id": "67428924",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-la-mer-by-elie-saab-67428924.html",
+    "title": "Best Price | Spacious Layout | Beachfront",
+    "type": "Apartment",
+    "location": "La Mer by Elie Saab, Al Marjan Island, Ras Al Khaimah",
+    "price": 2480000,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 2000,
+    "price_sqft": 1240,
+    "old_price": 2700000,
+    "new_price": 2480000,
+    "drop_aed": 220000,
+    "drop_pct": 8.1,
+    "detected_at": "2026-05-26T06:29:14.317310Z"
+  },
+  {
+    "id": "61674884",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-address-residences-2Q1jnPJfuZU.html",
+    "title": "Less OP I Tower 5",
+    "type": "Apartment",
+    "location": "Address Residences, Al Marjan Island, Ras Al Khaimah",
+    "price": 1690000,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 659,
+    "price_sqft": 2564,
+    "old_price": 1790000,
+    "new_price": 1690000,
+    "drop_aed": 100000,
+    "drop_pct": 5.6,
+    "detected_at": "2026-05-26T06:29:14.317374Z"
+  },
+  {
+    "id": "90922970",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-address-residences-90922970.html",
+    "title": "BELOW OP | Waterfront View I Modern Resort Luxury",
+    "type": "Apartment",
+    "location": "Address Residences, Al Marjan Island, Ras Al Khaimah",
+    "price": 3400000,
+    "beds": "2",
+    "baths": "2",
+    "sqft": 1160,
+    "price_sqft": 2931,
+    "old_price": 3500000,
+    "new_price": 3400000,
+    "drop_aed": 100000,
+    "drop_pct": 2.9,
+    "detected_at": "2026-05-26T06:29:14.317412Z"
+  }
+]
