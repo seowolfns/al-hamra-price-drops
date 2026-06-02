@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "76101648",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-pacific-pacific-tonga-76101648.html",
+    "title": "Furnished 1BR | Ground Floor | Pacific RAK",
+    "type": "Apartment",
+    "location": "Pacific Tonga, Pacific, Al Marjan Island, Ras Al Khaimah",
+    "price": 900000,
+    "beds": "1",
+    "baths": "2",
+    "sqft": 949,
+    "price_sqft": 948,
+    "old_price": 990000,
+    "new_price": 900000,
+    "drop_aed": 90000,
+    "drop_pct": 9.1,
+    "detected_at": "2026-06-02T06:56:50.704264Z"
+  },
+  {
+    "id": "80676714",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-bab-al-bahar-kahraman-80676714.html",
+    "title": "2 Bedroom Apartment For Sale -  Al Marjan Island - Garden View",
+    "type": "Apartment",
+    "location": "Kahraman, Bab Al Bahar, Al Marjan Island, Ras Al Khaimah",
+    "price": 1750000,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 1662,
+    "price_sqft": 1052,
+    "old_price": 1870000,
+    "new_price": 1750000,
+    "drop_aed": 120000,
+    "drop_pct": 6.4,
+    "detected_at": "2026-06-02T06:56:50.704358Z"
+  }
+]
