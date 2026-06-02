@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "90931998",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-al-hamra-marina-residences-marina-apartments-e-90931998.html",
+    "title": "hot deal below op Ready-to-Move in brand new",
+    "type": "Apartment",
+    "location": "Marina Apartments E, Al Hamra Marina Residences, Al Hamra Village, Ras Al Khaimah",
+    "price": 459999,
+    "beds": "studio",
+    "baths": "1",
+    "sqft": 500,
+    "price_sqft": 919,
+    "old_price": 625000,
+    "new_price": 459999,
+    "drop_aed": 165001,
+    "drop_pct": 26.4,
+    "detected_at": "2026-06-02T06:49:03.662701Z"
+  }
+]
