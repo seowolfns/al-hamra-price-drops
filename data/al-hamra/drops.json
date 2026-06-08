@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "99119097",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-al-hamra-village-falcon-island-falcon-island-north-99119097.html",
+    "title": "2 Bed + Maids I Canal View",
+    "type": "Townhouse",
+    "location": "Falcon Island North, Falcon Island, Al Hamra Village, Ras Al Khaimah",
+    "price": 2800000,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 1938,
+    "price_sqft": 1444,
+    "old_price": 2900000,
+    "new_price": 2800000,
+    "drop_aed": 100000,
+    "drop_pct": 3.4,
+    "detected_at": "2026-06-08T06:51:49.549755Z"
+  }
+]
