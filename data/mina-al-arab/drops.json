@@ -1,1 +1,53 @@
-[]
+[
+  {
+    "id": "92273802",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-92273802.html",
+    "title": "high floor brand new ready to move access to beach",
+    "type": "Apartment",
+    "location": "Bay Residences, Hayat Island, Mina Al Arab, Ras Al Khaimah",
+    "price": 1600000,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 1582,
+    "price_sqft": 1011,
+    "old_price": 1680000,
+    "new_price": 1600000,
+    "drop_aed": 80000,
+    "drop_pct": 4.8,
+    "detected_at": "2026-06-09T06:46:49.477466Z"
+  },
+  {
+    "id": "97365689",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-mina-al-arab-flamingo-villas-97365689.html",
+    "title": "Neat 3 Bed + Maids | Close to Pool | Flamingo 1",
+    "type": "Villa",
+    "location": "Flamingo Villas, Mina Al Arab, Ras Al Khaimah",
+    "price": 2750000,
+    "beds": "3",
+    "baths": "3",
+    "sqft": 2477,
+    "price_sqft": 1110,
+    "old_price": 2860000,
+    "new_price": 2750000,
+    "drop_aed": 110000,
+    "drop_pct": 3.8,
+    "detected_at": "2026-06-09T06:46:49.477460Z"
+  },
+  {
+    "id": "70682663",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-cape-hayat-70682663.html",
+    "title": "Resale | Close To OP | Beach Access | High ROI",
+    "type": "Apartment",
+    "location": "Cape Hayat, Mina Al Arab, Ras Al Khaimah",
+    "price": 1200000,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 964,
+    "price_sqft": 1244,
+    "old_price": 1225000,
+    "new_price": 1200000,
+    "drop_aed": 25000,
+    "drop_pct": 2.0,
+    "detected_at": "2026-06-09T06:46:49.477259Z"
+  }
+]
