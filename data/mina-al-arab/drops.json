@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "87871894",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-mina-al-arab-marbella-marbella-i-villas-87871894.html",
+    "title": "golden chance below op price -brand new",
+    "type": "Townhouse",
+    "location": "Marbella I Villas, Marbella, Mina Al Arab, Ras Al Khaimah",
+    "price": 2650000,
+    "beds": "3",
+    "baths": "4",
+    "sqft": 2559,
+    "price_sqft": 1035,
+    "old_price": 2735000,
+    "new_price": 2650000,
+    "drop_aed": 85000,
+    "drop_pct": 3.1,
+    "detected_at": "2026-06-17T07:43:16.549634Z"
+  },
+  {
+    "id": "103239661",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-the-lagoons-lagoon-b4-103239661.html",
+    "title": "Best Price / 3rd floor unit /Tenanted/ Lagoon view",
+    "type": "Apartment",
+    "location": "Lagoon B4, The Lagoons, Mina Al Arab, Ras Al Khaimah",
+    "price": 780000,
+    "beds": "1",
+    "baths": "2",
+    "sqft": 1030,
+    "price_sqft": 757,
+    "old_price": 800000,
+    "new_price": 780000,
+    "drop_aed": 20000,
+    "drop_pct": 2.5,
+    "detected_at": "2026-06-17T07:43:16.549528Z"
+  }
+]
