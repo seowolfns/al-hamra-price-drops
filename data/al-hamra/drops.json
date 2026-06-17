@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "15850173",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-al-hamra-marina-residences-15850173.html",
+    "title": "Studio For Sale In Al Hamra Marina  - Upgraded - Holiday Home Style",
+    "type": "Apartment",
+    "location": "Marina Apartments A, Al Hamra Marina Residences, Al Hamra Village, Ras Al Khaimah",
+    "price": 499000,
+    "beds": "studio",
+    "baths": "1",
+    "sqft": 600,
+    "price_sqft": 831,
+    "old_price": 510999,
+    "new_price": 499000,
+    "drop_aed": 11999,
+    "drop_pct": 2.3,
+    "detected_at": "2026-06-17T07:21:14.362413Z"
+  },
+  {
+    "id": "71496446",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-marina-residences-phase-3-east-71496446.html",
+    "title": "Brand New 1 Bedroom for Sale in Al Hamra - Fully Furnished",
+    "type": "Apartment",
+    "location": "East, Marina Residences Phase 3, Al Hamra Village, Ras Al Khaimah",
+    "price": 840000,
+    "beds": "1",
+    "baths": "2",
+    "sqft": 821,
+    "price_sqft": 1023,
+    "old_price": 850000,
+    "new_price": 840000,
+    "drop_aed": 10000,
+    "drop_pct": 1.2,
+    "detected_at": "2026-06-17T07:21:14.362342Z"
+  }
+]
