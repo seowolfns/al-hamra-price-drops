@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "98699942",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-bab-al-bahar-kahraman-98699942.html",
+    "title": "Sea View 2-Bedroom | Bab Al Bahr",
+    "type": "Apartment",
+    "location": "Kahraman, Bab Al Bahar, Al Marjan Island, Ras Al Khaimah",
+    "price": 1850000,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 1900,
+    "price_sqft": 973,
+    "old_price": 1880000,
+    "new_price": 1850000,
+    "drop_aed": 30000,
+    "drop_pct": 1.6,
+    "detected_at": "2026-06-18T07:22:24.984751Z"
+  }
+]
