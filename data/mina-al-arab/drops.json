@@ -1,36 +1,19 @@
 [
   {
-    "id": "80677214",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-mina-al-arab-flamingo-villas-80677214.html",
-    "title": "Mangrove View | 3 BHK Villa| Mina Al Arab",
-    "type": "Villa",
-    "location": "Flamingo Villas, Mina Al Arab, Ras Al Khaimah",
-    "price": 2450000,
-    "beds": "3",
-    "baths": "4",
-    "sqft": 2265,
-    "price_sqft": 1081,
-    "old_price": 2700000,
-    "new_price": 2450000,
-    "drop_aed": 250000,
-    "drop_pct": 9.3,
-    "detected_at": "2026-06-18T07:43:50.321773Z"
-  },
-  {
-    "id": "80280334",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-mina-al-arab-granada-granada-ii-80280334.html",
-    "title": "Prime Corner Villa | 3 BR | Great investment",
+    "id": "97824920",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-mina-al-arab-granada-granada-ii-97824920.html",
+    "title": "Elegant Corner- READY TO MOVE - prime location",
     "type": "Villa",
     "location": "Granada II, Granada, Mina Al Arab, Ras Al Khaimah",
-    "price": 3300000,
+    "price": 3250000,
     "beds": "3",
     "baths": "4",
     "sqft": 3170,
-    "price_sqft": 1041,
-    "old_price": 3390000,
-    "new_price": 3300000,
-    "drop_aed": 90000,
-    "drop_pct": 2.7,
-    "detected_at": "2026-06-18T07:43:50.321587Z"
+    "price_sqft": 1025,
+    "old_price": 3500000,
+    "new_price": 3250000,
+    "drop_aed": 250000,
+    "drop_pct": 7.1,
+    "detected_at": "2026-06-19T07:35:50.656738Z"
   }
 ]
