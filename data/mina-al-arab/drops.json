@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "76164413",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-gateway-residences-76164413.html",
+    "title": "1 Bedroom Apartment for Sale - Lagoon View - Mina Al Arab",
+    "type": "Apartment",
+    "location": "Gateway Residences, Mina Al Arab, Ras Al Khaimah",
+    "price": 1200000,
+    "beds": "1",
+    "baths": "2",
+    "sqft": 855,
+    "price_sqft": 1403,
+    "old_price": 1250000,
+    "new_price": 1200000,
+    "drop_aed": 50000,
+    "drop_pct": 4.0,
+    "detected_at": "2026-06-22T07:54:38.298427Z"
+  }
+]
