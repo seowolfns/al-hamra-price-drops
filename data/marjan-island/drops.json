@@ -1,1 +1,53 @@
-[]
+[
+  {
+    "id": "73863159",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/penthouse-for-sale-ras-al-khaimah-al-marjan-island-oceano-73863159.html",
+    "title": "Luxury Penthouse | Resale | Offers Invited",
+    "type": "Penthouse",
+    "location": "Oceano, Al Marjan Island, Ras Al Khaimah",
+    "price": 22000000,
+    "beds": "5",
+    "baths": "6",
+    "sqft": 7652,
+    "price_sqft": 2875,
+    "old_price": 26000000,
+    "new_price": 22000000,
+    "drop_aed": 4000000,
+    "drop_pct": 15.4,
+    "detected_at": "2026-06-30T06:37:49.962031Z"
+  },
+  {
+    "id": "82381539",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-address-residences-82381539.html",
+    "title": "WYNN AND SEA VIEW | BUILDING 5 | BELOW OP",
+    "type": "Apartment",
+    "location": "Address Residences, Al Marjan Island, Ras Al Khaimah",
+    "price": 1550000,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 663,
+    "price_sqft": 2337,
+    "old_price": 1600000,
+    "new_price": 1550000,
+    "drop_aed": 50000,
+    "drop_pct": 3.1,
+    "detected_at": "2026-06-30T06:37:49.961033Z"
+  },
+  {
+    "id": "69092138",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-pacific-pacific-bora-bora-69092138.html",
+    "title": "High Floor | Ready To Move | Stunning View",
+    "type": "Apartment",
+    "location": "Pacific Bora Bora, Pacific, Al Marjan Island, Ras Al Khaimah",
+    "price": 1010000,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 992,
+    "price_sqft": 1018,
+    "old_price": 1020000,
+    "new_price": 1010000,
+    "drop_aed": 10000,
+    "drop_pct": 1.0,
+    "detected_at": "2026-06-30T06:37:49.961162Z"
+  }
+]
