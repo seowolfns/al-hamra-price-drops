@@ -1,1 +1,53 @@
-[]
+[
+  {
+    "id": "98244112",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-royal-breeze-royal-breeze-5-98244112.html",
+    "title": "Investor Opportunity | Furnished | Beach Access",
+    "type": "Apartment",
+    "location": "Royal Breeze 5, Royal Breeze, Al Hamra Village, Ras Al Khaimah",
+    "price": 1350000,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 1250,
+    "price_sqft": 1080,
+    "old_price": 1430000,
+    "new_price": 1350000,
+    "drop_aed": 80000,
+    "drop_pct": 5.6,
+    "detected_at": "2026-07-02T06:22:26.733471Z"
+  },
+  {
+    "id": "107728652",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-royal-breeze-royal-breeze-1-107728652.html",
+    "title": "Stunning Sea View | High Floor | 1BR",
+    "type": "Apartment",
+    "location": "Royal Breeze 1, Royal Breeze, Al Hamra Village, Ras Al Khaimah",
+    "price": 885000,
+    "beds": "1",
+    "baths": "2",
+    "sqft": 806,
+    "price_sqft": 1098,
+    "old_price": 899000,
+    "new_price": 885000,
+    "drop_aed": 14000,
+    "drop_pct": 1.6,
+    "detected_at": "2026-07-02T06:22:26.733549Z"
+  },
+  {
+    "id": "109505638",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-royal-breeze-royal-breeze-2-109505638.html",
+    "title": "Lagoon View Studio | Unfurnished | Prime Location",
+    "type": "Apartment",
+    "location": "Royal breeze 2, Royal Breeze, Al Hamra Village, Ras Al Khaimah",
+    "price": 470000,
+    "beds": "studio",
+    "baths": "1",
+    "sqft": 463,
+    "price_sqft": 1015,
+    "old_price": 475000,
+    "new_price": 470000,
+    "drop_aed": 5000,
+    "drop_pct": 1.1,
+    "detected_at": "2026-07-02T06:22:26.733403Z"
+  }
+]
