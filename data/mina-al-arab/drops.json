@@ -1,1 +1,53 @@
-[]
+[
+  {
+    "id": "92273380",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-mina-al-arab-marbella-marbella-i-villas-92273380.html",
+    "title": "Ready To Move | The Best Price | The Beach Access",
+    "type": "Townhouse",
+    "location": "Marbella I Villas, Marbella, Mina Al Arab, Ras Al Khaimah",
+    "price": 2275000,
+    "beds": "2",
+    "baths": "4",
+    "sqft": 2560,
+    "price_sqft": 888,
+    "old_price": 2375000,
+    "new_price": 2275000,
+    "drop_aed": 100000,
+    "drop_pct": 4.2,
+    "detected_at": "2026-07-06T07:21:21.105487Z"
+  },
+  {
+    "id": "110520976",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-cape-hayat-110520976.html",
+    "title": "1 BHK | Ready To Move In October | Lagoon View",
+    "type": "Apartment",
+    "location": "Cape Hayat, Mina Al Arab, Ras Al Khaimah",
+    "price": 1400000,
+    "beds": "1",
+    "baths": "2",
+    "sqft": 963,
+    "price_sqft": 1453,
+    "old_price": 1450000,
+    "new_price": 1400000,
+    "drop_aed": 50000,
+    "drop_pct": 3.4,
+    "detected_at": "2026-07-06T07:21:21.105749Z"
+  },
+  {
+    "id": "108169186",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-raha-island-edge-108169186.html",
+    "title": "Mid-Floor|Partial Lagoon Views|With 2 YR PPlan",
+    "type": "Apartment",
+    "location": "Edge, Raha Island, Mina Al Arab, Ras Al Khaimah",
+    "price": 1100000,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 630,
+    "price_sqft": 1746,
+    "old_price": 1125000,
+    "new_price": 1100000,
+    "drop_aed": 25000,
+    "drop_pct": 2.2,
+    "detected_at": "2026-07-06T07:21:21.105616Z"
+  }
+]
