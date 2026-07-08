@@ -1,19 +1,19 @@
 [
   {
-    "id": "80278393",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-80278393.html",
-    "title": "Direct Beach Access | Spacious  | Vacant",
+    "id": "100860257",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-the-lagoons-lagoon-b6-100860257.html",
+    "title": "Spacious Fabulous 1 BR l The Lagoon Mina Al Arab",
     "type": "Apartment",
-    "location": "Bay Residences, Hayat Island, Mina Al Arab, Ras Al Khaimah",
-    "price": 1050000,
+    "location": "Lagoon B6, The Lagoons, Mina Al Arab, Ras Al Khaimah",
+    "price": 1000000,
     "beds": "1",
-    "baths": "1",
-    "sqft": 818,
-    "price_sqft": 1283,
-    "old_price": 1100000,
-    "new_price": 1050000,
-    "drop_aed": 50000,
-    "drop_pct": 4.5,
-    "detected_at": "2026-07-07T07:01:48.966708Z"
+    "baths": "2",
+    "sqft": 1050,
+    "price_sqft": 952,
+    "old_price": 1099999,
+    "new_price": 1000000,
+    "drop_aed": 99999,
+    "drop_pct": 9.1,
+    "detected_at": "2026-07-08T05:51:07.661028Z"
   }
 ]
