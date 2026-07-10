@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "100398197",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-bab-al-bahar-yakout-100398197.html",
+    "title": "Luxury Upgraded Studio | Fully Furnished",
+    "type": "Apartment",
+    "location": "Yakout, Bab Al Bahar, Al Marjan Island, Ras Al Khaimah",
+    "price": 649000,
+    "beds": "studio",
+    "baths": "1",
+    "sqft": 591,
+    "price_sqft": 1098,
+    "old_price": 659000,
+    "new_price": 649000,
+    "drop_aed": 10000,
+    "drop_pct": 1.5,
+    "detected_at": "2026-07-10T06:21:27.235395Z"
+  }
+]
