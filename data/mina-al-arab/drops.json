@@ -1,19 +1,19 @@
 [
   {
-    "id": "93994831",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-mina-al-arab-malibu-93994831.html",
-    "title": "Ready To Move In | Lowest Price | Beach Access",
-    "type": "Villa",
-    "location": "Malibu, Mina Al Arab, Ras Al Khaimah",
-    "price": 2850000,
-    "beds": "3",
-    "baths": "4",
-    "sqft": 3250,
-    "price_sqft": 876,
-    "old_price": 2900000,
-    "new_price": 2850000,
-    "drop_aed": 50000,
-    "drop_pct": 1.7,
-    "detected_at": "2026-07-11T05:42:50.622544Z"
+    "id": "101728607",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-101728607.html",
+    "title": "Direct Beach | Semi Furnished | Ready",
+    "type": "Apartment",
+    "location": "Bay Residences, Hayat Island, Mina Al Arab, Ras Al Khaimah",
+    "price": 1200000,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 785,
+    "price_sqft": 1528,
+    "old_price": 1220000,
+    "new_price": 1200000,
+    "drop_aed": 20000,
+    "drop_pct": 1.6,
+    "detected_at": "2026-07-12T05:53:56.139055Z"
   }
 ]
