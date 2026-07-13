@@ -1,19 +1,36 @@
 [
   {
-    "id": "101728607",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-101728607.html",
-    "title": "Direct Beach | Semi Furnished | Ready",
+    "id": "110952055",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-raha-island-mirasol-110952055.html",
+    "title": "Mirasol 1BR | Seaview | Genuine Resale | Flexible PP",
+    "type": "Apartment",
+    "location": "Mirasol, Raha Island, Mina Al Arab, Ras Al Khaimah",
+    "price": 1300000,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 602,
+    "price_sqft": 2159,
+    "old_price": 1400000,
+    "new_price": 1300000,
+    "drop_aed": 100000,
+    "drop_pct": 7.1,
+    "detected_at": "2026-07-13T06:06:37.953901Z"
+  },
+  {
+    "id": "88334937",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-88334937.html",
+    "title": "Coastal Zen | High Invest Potential | Low Floor",
     "type": "Apartment",
     "location": "Bay Residences, Hayat Island, Mina Al Arab, Ras Al Khaimah",
-    "price": 1200000,
+    "price": 1100000,
     "beds": "1",
     "baths": "1",
     "sqft": 785,
-    "price_sqft": 1528,
-    "old_price": 1220000,
-    "new_price": 1200000,
-    "drop_aed": 20000,
-    "drop_pct": 1.6,
-    "detected_at": "2026-07-12T05:53:56.139055Z"
+    "price_sqft": 1401,
+    "old_price": 1150000,
+    "new_price": 1100000,
+    "drop_aed": 50000,
+    "drop_pct": 4.3,
+    "detected_at": "2026-07-13T06:06:37.953317Z"
   }
 ]
