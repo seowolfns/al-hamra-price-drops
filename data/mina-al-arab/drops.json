@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "107274933",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-mina-al-arab-bermuda-107274933.html",
+    "title": "Unfurnished | Private Pool | Corner Villa",
+    "type": "Townhouse",
+    "location": "Bermuda, Mina Al Arab, Ras Al Khaimah",
+    "price": 4200000,
+    "beds": "3",
+    "baths": "3",
+    "sqft": 3773,
+    "price_sqft": 1113,
+    "old_price": 4400000,
+    "new_price": 4200000,
+    "drop_aed": 200000,
+    "drop_pct": 4.5,
+    "detected_at": "2026-07-17T06:06:17.591121Z"
+  },
+  {
+    "id": "108171439",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-mina-al-arab-granada-granada-ii-108171439.html",
+    "title": "Brand New Villa |Handover Soon |Great Investment",
+    "type": "Townhouse",
+    "location": "Granada II, Granada, Mina Al Arab, Ras Al Khaimah",
+    "price": 2550000,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 1835,
+    "price_sqft": 1389,
+    "old_price": 2650000,
+    "new_price": 2550000,
+    "drop_aed": 100000,
+    "drop_pct": 3.8,
+    "detected_at": "2026-07-17T06:06:17.591186Z"
+  }
+]

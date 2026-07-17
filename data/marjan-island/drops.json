@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "112734033",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/duplex-for-sale-ras-al-khaimah-al-marjan-island-pacific-112734033.html",
+    "title": "PARTIAL SEA VIEW  I ATTRACTIVE PRICE I DUPLEX 2BR",
+    "type": "Duplex",
+    "location": "Pacific, Al Marjan Island, Ras Al Khaimah",
+    "price": 1500000,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 1429,
+    "price_sqft": 1049,
+    "old_price": 1599999,
+    "new_price": 1500000,
+    "drop_aed": 99999,
+    "drop_pct": 6.2,
+    "detected_at": "2026-07-17T05:45:13.493104Z"
+  },
+  {
+    "id": "112734030",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/duplex-for-sale-ras-al-khaimah-al-marjan-island-pacific-112734030.html",
+    "title": "FULL SEA VIEW I FURNISHED I NEGOTIABLE PRICE",
+    "type": "Duplex",
+    "location": "Pacific, Al Marjan Island, Ras Al Khaimah",
+    "price": 2450000,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 1420,
+    "price_sqft": 1725,
+    "old_price": 2525000,
+    "new_price": 2450000,
+    "drop_aed": 75000,
+    "drop_pct": 3.0,
+    "detected_at": "2026-07-17T05:45:13.493118Z"
+  }
+]
