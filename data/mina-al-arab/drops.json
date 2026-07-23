@@ -1,36 +1,19 @@
 [
   {
-    "id": "106849209",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-mina-al-arab-marbella-marbella-ii-villas-106849209.html",
-    "title": "Furnished Modern Villa | 3 Bed + Maid's Room",
+    "id": "113244103",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-mina-al-arab-marbella-marbella-ii-villas-113244103.html",
+    "title": "Fully Furnished | Beach Access | Brand New",
     "type": "Villa",
     "location": "Marbella II Villas, Marbella, Mina Al Arab, Ras Al Khaimah",
-    "price": 3150000,
-    "beds": "3",
+    "price": 2240000,
+    "beds": "2",
     "baths": "4",
-    "sqft": 2602,
-    "price_sqft": 1210,
-    "old_price": 3600000,
-    "new_price": 3150000,
-    "drop_aed": 450000,
-    "drop_pct": 12.5,
-    "detected_at": "2026-07-22T05:58:05.400595Z"
-  },
-  {
-    "id": "118586620",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-mina-al-arab-malibu-118586620.html",
-    "title": "FOR SALE AMZING MALIBU VILLA WITH 5BHK NEAR BEACH",
-    "type": "Villa",
-    "location": "Malibu, Mina Al Arab, Ras Al Khaimah",
-    "price": 4400000,
-    "beds": "5",
-    "baths": "6",
-    "sqft": 4900,
-    "price_sqft": 897,
-    "old_price": 4900000,
-    "new_price": 4400000,
-    "drop_aed": 500000,
-    "drop_pct": 10.2,
-    "detected_at": "2026-07-22T05:58:05.400533Z"
+    "sqft": 1932,
+    "price_sqft": 1159,
+    "old_price": 2399000,
+    "new_price": 2240000,
+    "drop_aed": 159000,
+    "drop_pct": 6.6,
+    "detected_at": "2026-07-23T05:50:00.340335Z"
   }
 ]
