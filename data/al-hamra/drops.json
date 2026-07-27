@@ -1,19 +1,19 @@
 [
   {
-    "id": "120215805",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-al-hamra-village-falcon-island-falcon-island-north-120215805.html",
-    "title": "Premium Island Villa Close to Golf & Marina",
-    "type": "Villa",
-    "location": "Falcon Island North, Falcon Island, Al Hamra Village, Ras Al Khaimah",
-    "price": 2850000,
-    "beds": "3",
-    "baths": "5",
-    "sqft": 2580,
-    "price_sqft": 1104,
-    "old_price": 3000000,
-    "new_price": 2850000,
-    "drop_aed": 150000,
-    "drop_pct": 5.0,
-    "detected_at": "2026-07-26T05:43:20.968491Z"
+    "id": "119479410",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-marina-residences-phase-3-east-119479410.html",
+    "title": "Great Amenities | New Building | Tenanted",
+    "type": "Apartment",
+    "location": "East, Marina Residences Phase 3, Al Hamra Village, Ras Al Khaimah",
+    "price": 525000,
+    "beds": "studio",
+    "baths": "1",
+    "sqft": 497,
+    "price_sqft": 1056,
+    "old_price": 600000,
+    "new_price": 525000,
+    "drop_aed": 75000,
+    "drop_pct": 12.5,
+    "detected_at": "2026-07-27T06:06:38.856314Z"
   }
 ]
