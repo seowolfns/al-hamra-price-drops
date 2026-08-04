@@ -1,1 +1,53 @@
-[]
+[
+  {
+    "id": "120188037",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-120188037.html",
+    "title": "New and Elegant1BR | Partial Sea View | Beachfront",
+    "type": "Apartment",
+    "location": "Bay Residences, Hayat Island, Mina Al Arab, Ras Al Khaimah",
+    "price": 1050000,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 794,
+    "price_sqft": 1322,
+    "old_price": 1150000,
+    "new_price": 1050000,
+    "drop_aed": 100000,
+    "drop_pct": 8.7,
+    "detected_at": "2026-08-04T05:39:04.068642Z"
+  },
+  {
+    "id": "65584346",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-65584346.html",
+    "title": "Full Sea View I High Floor I 2 + Maid's",
+    "type": "Apartment",
+    "location": "Bay Residences, Hayat Island, Mina Al Arab, Ras Al Khaimah",
+    "price": 2450000,
+    "beds": "2",
+    "baths": "2",
+    "sqft": 1560,
+    "price_sqft": 1570,
+    "old_price": 2600000,
+    "new_price": 2450000,
+    "drop_aed": 150000,
+    "drop_pct": 5.8,
+    "detected_at": "2026-08-04T05:39:04.068694Z"
+  },
+  {
+    "id": "61665925",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-cape-hayat-2Q1eDMzmmlE.html",
+    "title": "1 Bed For Sale in Mina - Best Price - Below OP - Handover soon",
+    "type": "Apartment",
+    "location": "Cape Hayat, Mina Al Arab, Ras Al Khaimah",
+    "price": 950000,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 964,
+    "price_sqft": 985,
+    "old_price": 1000000,
+    "new_price": 950000,
+    "drop_aed": 50000,
+    "drop_pct": 5.0,
+    "detected_at": "2026-08-04T05:39:04.068740Z"
+  }
+]
