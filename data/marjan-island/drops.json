@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "14198609",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-playa-viva-14198609.html",
+    "title": "Studio Apartment for Sale in Al Marjan Island - Zero Commission",
+    "type": "Apartment",
+    "location": "Playa Viva, Al Marjan Island, Ras Al Khaimah",
+    "price": 829000,
+    "beds": "studio",
+    "baths": "1",
+    "sqft": 253,
+    "price_sqft": 3276,
+    "old_price": 839000,
+    "new_price": 829000,
+    "drop_aed": 10000,
+    "drop_pct": 1.2,
+    "detected_at": "2026-08-15T03:11:14.269238Z"
+  }
+]
