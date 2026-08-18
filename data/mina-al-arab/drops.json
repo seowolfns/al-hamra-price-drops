@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "128374296",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-mina-al-arab-flamingo-villas-128374296.html",
+    "title": "Premium 3BR+Maid | Flamingo Phase 1",
+    "type": "Villa",
+    "location": "Flamingo Villas, Mina Al Arab, Ras Al Khaimah",
+    "price": 2100000,
+    "beds": "3",
+    "baths": "4",
+    "sqft": 2215,
+    "price_sqft": 948,
+    "old_price": 2200000,
+    "new_price": 2100000,
+    "drop_aed": 100000,
+    "drop_pct": 4.5,
+    "detected_at": "2026-08-18T03:18:10.007250Z"
+  },
+  {
+    "id": "127481132",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-solera-downtown-mina-127481132.html",
+    "title": "Distress Deal I 35 K Below OP I spacious Studio",
+    "type": "Apartment",
+    "location": "Solera Downtown Mina, Mina Al Arab, Ras Al Khaimah",
+    "price": 784999,
+    "beds": "studio",
+    "baths": "1",
+    "sqft": 402,
+    "price_sqft": 1952,
+    "old_price": 794999,
+    "new_price": 784999,
+    "drop_aed": 10000,
+    "drop_pct": 1.3,
+    "detected_at": "2026-08-18T03:18:10.007396Z"
+  }
+]
