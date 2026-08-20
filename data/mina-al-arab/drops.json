@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "129755461",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-cape-hayat-129755461.html",
+    "title": "Rare Corner | Sea, Lagoon & Wynn View | High Floor",
+    "type": "Apartment",
+    "location": "Cape Hayat, Mina Al Arab, Ras Al Khaimah",
+    "price": 3599900,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 1715,
+    "price_sqft": 2099,
+    "old_price": 3699000,
+    "new_price": 3599900,
+    "drop_aed": 99100,
+    "drop_pct": 2.7,
+    "detected_at": "2026-08-20T03:14:09.807428Z"
+  }
+]
