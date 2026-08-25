@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "132484560",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-soto-grande-132484560.html",
+    "title": "Premium 2BR + Maid | Refined Coastal Living",
+    "type": "Apartment",
+    "location": "Soto Grande, Al Hamra Village, Ras Al Khaimah",
+    "price": 2557828,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 1129,
+    "price_sqft": 2265,
+    "old_price": 2942828,
+    "new_price": 2557828,
+    "drop_aed": 385000,
+    "drop_pct": 13.1,
+    "detected_at": "2026-08-25T03:07:08.154249Z"
+  }
+]
