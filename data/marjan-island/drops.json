@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "129758356",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-the-beach-vista-129758356.html",
+    "title": "Highest Floor |Beach and Wynn View| Selling at OP",
+    "type": "Apartment",
+    "location": "The Beach Vista, Al Marjan Island, Ras Al Khaimah",
+    "price": 2250000,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 757,
+    "price_sqft": 2972,
+    "old_price": 2500000,
+    "new_price": 2250000,
+    "drop_aed": 250000,
+    "drop_pct": 10.0,
+    "detected_at": "2026-08-28T14:45:53.503288Z"
+  }
+]
