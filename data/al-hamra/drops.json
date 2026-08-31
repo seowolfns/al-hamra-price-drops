@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "115931573",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-al-hamra-marina-residences-marina-apartments-c-115931573.html",
+    "title": "Large 2 Bedroom Apartment for Sale - Al Hamra Village - Spacious",
+    "type": "Apartment",
+    "location": "Marina Apartments C, Al Hamra Marina Residences, Al Hamra Village, Ras Al Khaimah",
+    "price": 1150000,
+    "beds": "2",
+    "baths": "2",
+    "sqft": 2090,
+    "price_sqft": 550,
+    "old_price": 1200000,
+    "new_price": 1150000,
+    "drop_aed": 50000,
+    "drop_pct": 4.2,
+    "detected_at": "2026-08-31T08:19:13.727514Z"
+  },
+  {
+    "id": "137005906",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-royal-breeze-royal-breeze-2-137005906.html",
+    "title": "Investment Deal | Tenanted 1 BR for Sale",
+    "type": "Apartment",
+    "location": "Royal breeze 2, Royal Breeze, Al Hamra Village, Ras Al Khaimah",
+    "price": 700000,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 713,
+    "price_sqft": 981,
+    "old_price": 710000,
+    "new_price": 700000,
+    "drop_aed": 10000,
+    "drop_pct": 1.4,
+    "detected_at": "2026-08-31T08:19:13.727086Z"
+  }
+]
