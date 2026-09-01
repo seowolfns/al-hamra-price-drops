@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "70682663",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-cape-hayat-70682663.html",
+    "title": "300K Below OP | Cheapest In The Market | Beach Access",
+    "type": "Apartment",
+    "location": "Cape Hayat, Mina Al Arab, Ras Al Khaimah",
+    "price": 880000,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 964,
+    "price_sqft": 912,
+    "old_price": 900000,
+    "new_price": 880000,
+    "drop_aed": 20000,
+    "drop_pct": 2.2,
+    "detected_at": "2026-09-01T07:53:02.689540Z"
+  }
+]
