@@ -1,19 +1,36 @@
 [
   {
-    "id": "70682663",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-cape-hayat-70682663.html",
-    "title": "300K Below OP | Cheapest In The Market | Beach Access",
+    "id": "136106371",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-raha-island-edge-136106371.html",
+    "title": "Luxurious Residences | Exclusive Amenities",
     "type": "Apartment",
-    "location": "Cape Hayat, Mina Al Arab, Ras Al Khaimah",
-    "price": 880000,
+    "location": "Edge, Raha Island, Mina Al Arab, Ras Al Khaimah",
+    "price": 1000000,
     "beds": "1",
     "baths": "1",
-    "sqft": 964,
-    "price_sqft": 912,
-    "old_price": 900000,
-    "new_price": 880000,
-    "drop_aed": 20000,
-    "drop_pct": 2.2,
-    "detected_at": "2026-09-01T07:53:02.689540Z"
+    "sqft": 630,
+    "price_sqft": 1587,
+    "old_price": 1150000,
+    "new_price": 1000000,
+    "drop_aed": 150000,
+    "drop_pct": 13.0,
+    "detected_at": "2026-09-02T07:32:51.635400Z"
+  },
+  {
+    "id": "134615979",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-mina-al-arab-flamingo-villas-134615979.html",
+    "title": "Affordable 2BR Villa Flamingo Mina Al Arab",
+    "type": "Villa",
+    "location": "Flamingo Villas, Mina Al Arab, Ras Al Khaimah",
+    "price": 1900000,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 2300,
+    "price_sqft": 826,
+    "old_price": 2000000,
+    "new_price": 1900000,
+    "drop_aed": 100000,
+    "drop_pct": 5.0,
+    "detected_at": "2026-09-02T07:32:51.635209Z"
   }
 ]
