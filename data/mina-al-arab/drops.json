@@ -1,19 +1,19 @@
 [
   {
-    "id": "79417760",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-cape-hayat-79417760.html",
-    "title": "Lagoon View | Q3 Handover | Priced To Sell",
+    "id": "140131368",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-gateway-residences-2-140131368.html",
+    "title": "Brand New | Lagoon View | Investor Deal",
     "type": "Apartment",
-    "location": "Cape Hayat, Mina Al Arab, Ras Al Khaimah",
-    "price": 1500000,
+    "location": "Gateway Residences 2, Mina Al Arab, Ras Al Khaimah",
+    "price": 1000000,
     "beds": "1",
     "baths": "2",
-    "sqft": 980,
-    "price_sqft": 1530,
-    "old_price": 1600000,
-    "new_price": 1500000,
-    "drop_aed": 100000,
-    "drop_pct": 6.2,
-    "detected_at": "2026-09-07T08:15:39.161349Z"
+    "sqft": 910,
+    "price_sqft": 1098,
+    "old_price": 1050000,
+    "new_price": 1000000,
+    "drop_aed": 50000,
+    "drop_pct": 4.8,
+    "detected_at": "2026-09-08T07:16:29.782386Z"
   }
 ]
