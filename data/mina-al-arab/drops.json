@@ -1,19 +1,36 @@
 [
   {
-    "id": "140131368",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-gateway-residences-2-140131368.html",
-    "title": "Brand New | Lagoon View | Investor Deal",
+    "id": "131564863",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-131564863.html",
+    "title": "Large Balcony | One Bed | Partial Sea Views | VOT",
     "type": "Apartment",
-    "location": "Gateway Residences 2, Mina Al Arab, Ras Al Khaimah",
-    "price": 1000000,
+    "location": "Bay Residences, Hayat Island, Mina Al Arab, Ras Al Khaimah",
+    "price": 1299999,
     "beds": "1",
     "baths": "2",
-    "sqft": 910,
-    "price_sqft": 1098,
-    "old_price": 1050000,
-    "new_price": 1000000,
+    "sqft": 1184,
+    "price_sqft": 1097,
+    "old_price": 1349999,
+    "new_price": 1299999,
     "drop_aed": 50000,
-    "drop_pct": 4.8,
-    "detected_at": "2026-09-08T07:16:29.782386Z"
+    "drop_pct": 3.7,
+    "detected_at": "2026-09-09T07:38:02.905538Z"
+  },
+  {
+    "id": "131564343",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-131564343.html",
+    "title": "Largest 1BR | Massive Terrace | Luxury Podium Unit",
+    "type": "Apartment",
+    "location": "Bay Residences, Hayat Island, Mina Al Arab, Ras Al Khaimah",
+    "price": 1349999,
+    "beds": "1",
+    "baths": "2",
+    "sqft": 1722,
+    "price_sqft": 783,
+    "old_price": 1399999,
+    "new_price": 1349999,
+    "drop_aed": 50000,
+    "drop_pct": 3.6,
+    "detected_at": "2026-09-09T07:38:02.905554Z"
   }
 ]
