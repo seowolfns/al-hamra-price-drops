@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "141900696",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-address-residences-141900696.html",
+    "title": "Distress Deal | 500K Below Original Price",
+    "type": "Apartment",
+    "location": "Address Residences, Al Marjan Island, Ras Al Khaimah",
+    "price": 5100000,
+    "beds": "3",
+    "baths": "3",
+    "sqft": 1729,
+    "price_sqft": 2949,
+    "old_price": 5200000,
+    "new_price": 5100000,
+    "drop_aed": 100000,
+    "drop_pct": 1.9,
+    "detected_at": "2026-09-12T07:07:58.261262Z"
+  }
+]
