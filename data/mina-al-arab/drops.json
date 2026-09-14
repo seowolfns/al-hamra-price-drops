@@ -1,19 +1,19 @@
 [
   {
-    "id": "88334937",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-88334937.html",
-    "title": "Coastal Zen | High Invest Potential | Low Floor",
-    "type": "Apartment",
-    "location": "Bay Residences, Hayat Island, Mina Al Arab, Ras Al Khaimah",
-    "price": 1000000,
-    "beds": "1",
-    "baths": "1",
-    "sqft": 785,
-    "price_sqft": 1273,
-    "old_price": 1100000,
-    "new_price": 1000000,
-    "drop_aed": 100000,
-    "drop_pct": 9.1,
-    "detected_at": "2026-09-13T07:36:02.897643Z"
+    "id": "79823700",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-mina-al-arab-malibu-79823700.html",
+    "title": "Malibu Living - 3 Bedroom + Study + Maids",
+    "type": "Villa",
+    "location": "Malibu, Mina Al Arab, Ras Al Khaimah",
+    "price": 3000000,
+    "beds": "3",
+    "baths": "4",
+    "sqft": 3400,
+    "price_sqft": 882,
+    "old_price": 3060000,
+    "new_price": 3000000,
+    "drop_aed": 60000,
+    "drop_pct": 2.0,
+    "detected_at": "2026-09-14T08:01:00.711869Z"
   }
 ]
