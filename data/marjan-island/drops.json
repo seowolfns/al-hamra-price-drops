@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "125153412",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-nikki-beach-residences-125153412.html",
+    "title": "SEA VIEW | BELOW OP | READY TO TRANSFER",
+    "type": "Apartment",
+    "location": "Nikki Beach Residences, Al Marjan Island, Ras Al Khaimah",
+    "price": 1850000,
+    "beds": "1",
+    "baths": "2",
+    "sqft": 855,
+    "price_sqft": 2163,
+    "old_price": 2050000,
+    "new_price": 1850000,
+    "drop_aed": 200000,
+    "drop_pct": 9.8,
+    "detected_at": "2026-09-15T07:33:08.203955Z"
+  },
+  {
+    "id": "136545608",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-masa-residence-136545608.html",
+    "title": "Sea View 1BR Resale | MASA | 789 Sq.Ft",
+    "type": "Apartment",
+    "location": "Masa Residence, Al Marjan Island, Ras Al Khaimah",
+    "price": 1450000,
+    "beds": "1",
+    "baths": "2",
+    "sqft": 798,
+    "price_sqft": 1817,
+    "old_price": 1600000,
+    "new_price": 1450000,
+    "drop_aed": 150000,
+    "drop_pct": 9.4,
+    "detected_at": "2026-09-15T07:33:08.203758Z"
+  }
+]
