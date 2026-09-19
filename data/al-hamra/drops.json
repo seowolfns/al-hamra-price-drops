@@ -1,1 +1,53 @@
-[]
+[
+  {
+    "id": "139207643",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-al-hamra-village-falcon-island-falcon-island-north-139207643.html",
+    "title": "Direct Beachfront | Private Beach | Spacious 5BR",
+    "type": "Villa",
+    "location": "Falcon Island North, Falcon Island, Al Hamra Village, Ras Al Khaimah",
+    "price": 11500000,
+    "beds": "5",
+    "baths": "5",
+    "sqft": 7320,
+    "price_sqft": 1571,
+    "old_price": 12500000,
+    "new_price": 11500000,
+    "drop_aed": 1000000,
+    "drop_pct": 8.0,
+    "detected_at": "2026-09-19T07:10:40.347605Z"
+  },
+  {
+    "id": "121094059",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-golf-apartments-121094059.html",
+    "title": "HOT DEAL | Spacious Corner 1-Bedroom | Golf View",
+    "type": "Apartment",
+    "location": "Golf Apartments, Al Hamra Village, Ras Al Khaimah",
+    "price": 750000,
+    "beds": "1",
+    "baths": "2",
+    "sqft": 1151,
+    "price_sqft": 651,
+    "old_price": 800000,
+    "new_price": 750000,
+    "drop_aed": 50000,
+    "drop_pct": 6.2,
+    "detected_at": "2026-09-19T07:10:40.347541Z"
+  },
+  {
+    "id": "142348846",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-royal-breeze-royal-breeze-5-142348846.html",
+    "title": "Stunning Sea View1-Bed |Al Hamra Village",
+    "type": "Apartment",
+    "location": "Royal Breeze 5, Royal Breeze, Al Hamra Village, Ras Al Khaimah",
+    "price": 800000,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 750,
+    "price_sqft": 1066,
+    "old_price": 820000,
+    "new_price": 800000,
+    "drop_aed": 20000,
+    "drop_pct": 2.4,
+    "detected_at": "2026-09-19T07:10:40.347597Z"
+  }
+]
