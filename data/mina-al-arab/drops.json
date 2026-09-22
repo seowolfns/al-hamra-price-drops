@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "16076559",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-16076559.html",
+    "title": "Brand New Furnished 1BR |Sea View",
+    "type": "Apartment",
+    "location": "Bay Residences, Hayat Island, Mina Al Arab, Ras Al Khaimah",
+    "price": 1299999,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 818,
+    "price_sqft": 1589,
+    "old_price": 1499900,
+    "new_price": 1299999,
+    "drop_aed": 199901,
+    "drop_pct": 13.3,
+    "detected_at": "2026-09-22T07:46:19.626744Z"
+  },
+  {
+    "id": "145052496",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-mina-al-arab-marbella-marbella-ii-villas-145052496.html",
+    "title": "Distress deal Under OP Furnish 3br| Corner unit |",
+    "type": "Villa",
+    "location": "Marbella II Villas, Marbella, Mina Al Arab, Ras Al Khaimah",
+    "price": 3000000,
+    "beds": "3",
+    "baths": "4",
+    "sqft": 2600,
+    "price_sqft": 1153,
+    "old_price": 3050000,
+    "new_price": 3000000,
+    "drop_aed": 50000,
+    "drop_pct": 1.6,
+    "detected_at": "2026-09-22T07:46:19.626490Z"
+  }
+]
