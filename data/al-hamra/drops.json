@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "150019084",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-royal-breeze-royal-breeze-3-150019084.html",
+    "title": "High Floor Studio For Sale | Golf View | Hot Deal!",
+    "type": "Apartment",
+    "location": "Royal breeze 3, Royal Breeze, Al Hamra Village, Ras Al Khaimah",
+    "price": 470000,
+    "beds": "studio",
+    "baths": "1",
+    "sqft": 450,
+    "price_sqft": 1044,
+    "old_price": 485000,
+    "new_price": 470000,
+    "drop_aed": 15000,
+    "drop_pct": 3.1,
+    "detected_at": "2026-09-28T08:32:29.953728Z"
+  },
+  {
+    "id": "146423432",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-al-hamra-village-aila-homes-146423432.html",
+    "title": "Distress Deal | Prime Corner Semi-Detached Villa",
+    "type": "Townhouse",
+    "location": "Aila Homes, Al Hamra Village, Ras Al Khaimah",
+    "price": 3075000,
+    "beds": "3",
+    "baths": "4",
+    "sqft": 2899,
+    "price_sqft": 1060,
+    "old_price": 3150000,
+    "new_price": 3075000,
+    "drop_aed": 75000,
+    "drop_pct": 2.4,
+    "detected_at": "2026-09-28T08:32:29.953792Z"
+  }
+]
