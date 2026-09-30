@@ -1,1 +1,53 @@
-[]
+[
+  {
+    "id": "142376827",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-cala-del-mar-142376827.html",
+    "title": "1BR Under the OP | Sea View | Corner Unit",
+    "type": "Apartment",
+    "location": "Cala Del Mar, Al Marjan Island, Ras Al Khaimah",
+    "price": 1999000,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 1071,
+    "price_sqft": 1866,
+    "old_price": 2149000,
+    "new_price": 1999000,
+    "drop_aed": 150000,
+    "drop_pct": 7.0,
+    "detected_at": "2026-09-30T08:20:52.567804Z"
+  },
+  {
+    "id": "145511141",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-address-residences-145511141.html",
+    "title": "Under the OP| Sea/ Casino View | 2BR Corner Unit",
+    "type": "Apartment",
+    "location": "Address Residences, Al Marjan Island, Ras Al Khaimah",
+    "price": 3495000,
+    "beds": "2",
+    "baths": "2",
+    "sqft": 1169,
+    "price_sqft": 2989,
+    "old_price": 3750000,
+    "new_price": 3495000,
+    "drop_aed": 255000,
+    "drop_pct": 6.8,
+    "detected_at": "2026-09-30T08:20:52.568507Z"
+  },
+  {
+    "id": "109519456",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-aqua-arc-109519456.html",
+    "title": "CASH OFFERS_WYNN&SEA VIEW_40% DISC_FLEXIBLE PP",
+    "type": "Apartment",
+    "location": "Aqua Arc, Al Marjan Island, Ras Al Khaimah",
+    "price": 1861000,
+    "beds": "studio",
+    "baths": "1",
+    "sqft": 561,
+    "price_sqft": 3317,
+    "old_price": 1986000,
+    "new_price": 1861000,
+    "drop_aed": 125000,
+    "drop_pct": 6.3,
+    "detected_at": "2026-09-30T08:20:52.567651Z"
+  }
+]
