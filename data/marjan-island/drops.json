@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "149564967",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-nikki-beach-residences-149564967.html",
+    "title": "OPEN TO OFFERS | SEA AND WYNN VIEW | FURNISHED",
+    "type": "Apartment",
+    "location": "Nikki Beach Residences, Al Marjan Island, Ras Al Khaimah",
+    "price": 5300000,
+    "beds": "3",
+    "baths": "4",
+    "sqft": 1819,
+    "price_sqft": 2913,
+    "old_price": 5365000,
+    "new_price": 5300000,
+    "drop_aed": 65000,
+    "drop_pct": 1.2,
+    "detected_at": "2026-10-03T07:54:22.470655Z"
+  }
+]
