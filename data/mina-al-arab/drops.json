@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "142831516",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-mina-al-arab-flamingo-villas-142831516.html",
+    "title": "Corner unit - Swimming pool view - Never rented",
+    "type": "Townhouse",
+    "location": "Flamingo Villas, Mina Al Arab, Ras Al Khaimah",
+    "price": 2150000,
+    "beds": "3",
+    "baths": "4",
+    "sqft": 2215,
+    "price_sqft": 970,
+    "old_price": 2250000,
+    "new_price": 2150000,
+    "drop_aed": 100000,
+    "drop_pct": 4.4,
+    "detected_at": "2026-10-05T09:09:39.895921Z"
+  }
+]
