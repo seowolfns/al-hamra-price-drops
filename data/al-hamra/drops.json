@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "153313789",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-al-hamra-village-falcon-island-falcon-island-south-153313789.html",
+    "title": "WYNN VIEW | PRIVATE BEACH | 3 YEARS PAYMENT PLAN",
+    "type": "Villa",
+    "location": "Falcon Island South, Falcon Island, Al Hamra Village, Ras Al Khaimah",
+    "price": 10500000,
+    "beds": "5",
+    "baths": "7+",
+    "sqft": 8869,
+    "price_sqft": 1183,
+    "old_price": 11000000,
+    "new_price": 10500000,
+    "drop_aed": 500000,
+    "drop_pct": 4.5,
+    "detected_at": "2026-10-12T08:48:17.943755Z"
+  }
+]

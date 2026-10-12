@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "145066304",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-ras-al-khaimah-al-marjan-island-danah-bay-145066304.html",
+    "title": "Hot Deal | Lowest Price I 3BR Villa for Sale",
+    "type": "Villa",
+    "location": "Danah Bay, Al Marjan Island, Ras Al Khaimah",
+    "price": 4650000,
+    "beds": "3",
+    "baths": "5",
+    "sqft": 2545,
+    "price_sqft": 1827,
+    "old_price": 4800000,
+    "new_price": 4650000,
+    "drop_aed": 150000,
+    "drop_pct": 3.1,
+    "detected_at": "2026-10-12T08:53:28.791828Z"
+  }
+]
