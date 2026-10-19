@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "151944995",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-al-hamra-village-falcon-island-falcon-island-north-151944995.html",
+    "title": "2BR + Maid\u2019s | Premium Townhouse | Falcon Island",
+    "type": "Townhouse",
+    "location": "Falcon Island North, Falcon Island, Al Hamra Village, Ras Al Khaimah",
+    "price": 1790000,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 1474,
+    "price_sqft": 1214,
+    "old_price": 1850000,
+    "new_price": 1790000,
+    "drop_aed": 60000,
+    "drop_pct": 3.2,
+    "detected_at": "2026-10-19T07:38:29.871774Z"
+  },
+  {
+    "id": "143755154",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-marina-residences-phase-3-east-143755154.html",
+    "title": "Luxury Golf and Beach View I Premium Upgrades",
+    "type": "Apartment",
+    "location": "East, Marina Residences Phase 3, Al Hamra Village, Ras Al Khaimah",
+    "price": 1215000,
+    "beds": "1",
+    "baths": "2",
+    "sqft": 820,
+    "price_sqft": 1481,
+    "old_price": 1250000,
+    "new_price": 1215000,
+    "drop_aed": 35000,
+    "drop_pct": 2.8,
+    "detected_at": "2026-10-19T07:38:29.871827Z"
+  }
+]
