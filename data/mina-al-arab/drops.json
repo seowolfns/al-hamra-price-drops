@@ -1,1 +1,53 @@
-[]
+[
+  {
+    "id": "143755141",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-143755141.html",
+    "title": "Upgraded | Premium Finishings | Great Investment",
+    "type": "Apartment",
+    "location": "Bay Residences, Hayat Island, Mina Al Arab, Ras Al Khaimah",
+    "price": 1418000,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 805,
+    "price_sqft": 1761,
+    "old_price": 1460000,
+    "new_price": 1418000,
+    "drop_aed": 42000,
+    "drop_pct": 2.9,
+    "detected_at": "2026-10-19T08:14:01.000273Z"
+  },
+  {
+    "id": "68271484",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-cape-hayat-68271484.html",
+    "title": "Lagoon Studio For Sale | Cape Hayat Beachfront I Mina Al Arab",
+    "type": "Apartment",
+    "location": "Cape Hayat, Mina Al Arab, Ras Al Khaimah",
+    "price": 610000,
+    "beds": "studio",
+    "baths": "1",
+    "sqft": 466,
+    "price_sqft": 1309,
+    "old_price": 625000,
+    "new_price": 610000,
+    "drop_aed": 15000,
+    "drop_pct": 2.4,
+    "detected_at": "2026-10-19T08:14:01.000218Z"
+  },
+  {
+    "id": "160109243",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-mina-al-arab-marbella-marbella-ii-villas-160109243.html",
+    "title": "Distress Deal l Furnished 2 Beds + Maid l Sale",
+    "type": "Townhouse",
+    "location": "Marbella II Villas, Marbella, Mina Al Arab, Ras Al Khaimah",
+    "price": 2100000,
+    "beds": "2",
+    "baths": "4",
+    "sqft": 1970,
+    "price_sqft": 1065,
+    "old_price": 2150000,
+    "new_price": 2100000,
+    "drop_aed": 50000,
+    "drop_pct": 2.3,
+    "detected_at": "2026-10-19T08:14:01.000748Z"
+  }
+]
