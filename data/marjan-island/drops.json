@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "152842583",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-al-marjan-island-danah-bay-152842583.html",
+    "title": "2BR Townhouse | Corner | Beachfront Living",
+    "type": "Townhouse",
+    "location": "Danah Bay, Al Marjan Island, Ras Al Khaimah",
+    "price": 3550000,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 2519,
+    "price_sqft": 1409,
+    "old_price": 3600000,
+    "new_price": 3550000,
+    "drop_aed": 50000,
+    "drop_pct": 1.4,
+    "detected_at": "2026-10-20T07:47:35.842776Z"
+  }
+]
