@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "141900696",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-address-residences-141900696.html",
+    "title": "Distress Deal | 600K Below Original Price",
+    "type": "Apartment",
+    "location": "Address Residences, Al Marjan Island, Ras Al Khaimah",
+    "price": 4500000,
+    "beds": "3",
+    "baths": "3",
+    "sqft": 1729,
+    "price_sqft": 2602,
+    "old_price": 4999000,
+    "new_price": 4500000,
+    "drop_aed": 499000,
+    "drop_pct": 10.0,
+    "detected_at": "2026-10-26T07:44:24.152864Z"
+  },
+  {
+    "id": "162770599",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-bab-al-bahar-fayrouz-162770599.html",
+    "title": "Great Deal | Vacant | Payment Plan",
+    "type": "Apartment",
+    "location": "Fayrouz, Bab Al Bahar, Al Marjan Island, Ras Al Khaimah",
+    "price": 1400000,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 1677,
+    "price_sqft": 834,
+    "old_price": 1480000,
+    "new_price": 1400000,
+    "drop_aed": 80000,
+    "drop_pct": 5.4,
+    "detected_at": "2026-10-26T07:44:24.153524Z"
+  }
+]
