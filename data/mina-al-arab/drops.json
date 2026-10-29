@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "157808630",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-marbella-marbella-ii-villas-157808630.html",
+    "title": "Investor Opportunity | Distress Deal Marbella",
+    "type": "Townhouse",
+    "location": "Marbella II Villas, Marbella, Hayat Island, Mina Al Arab, Ras Al Khaimah",
+    "price": 1840050,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 1950,
+    "price_sqft": 943,
+    "old_price": 1900000,
+    "new_price": 1840050,
+    "drop_aed": 59950,
+    "drop_pct": 3.2,
+    "detected_at": "2026-10-29T08:57:28.961352Z"
+  },
+  {
+    "id": "153306441",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-hayat-island-bay-residences-153306441.html",
+    "title": "| Hot Deal | Bay Residence| 1BHK| Best Price|Mina|",
+    "type": "Apartment",
+    "location": "Bay Residences, Hayat Island, Mina Al Arab, Ras Al Khaimah",
+    "price": 950000,
+    "beds": "1",
+    "baths": "1",
+    "sqft": 818,
+    "price_sqft": 1161,
+    "old_price": 960000,
+    "new_price": 950000,
+    "drop_aed": 10000,
+    "drop_pct": 1.0,
+    "detected_at": "2026-10-29T08:57:28.961324Z"
+  }
+]
