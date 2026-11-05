@@ -1,36 +1,19 @@
 [
   {
-    "id": "161882131",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-mina-al-arab-bermuda-161882131.html",
-    "title": "Beautifully Corner 3BR Bermuda Villa with Maid",
-    "type": "Townhouse",
-    "location": "Bermuda, Mina Al Arab, Ras Al Khaimah",
-    "price": 3500000,
-    "beds": "3",
-    "baths": "5",
-    "sqft": 3773,
-    "price_sqft": 927,
-    "old_price": 3750000,
-    "new_price": 3500000,
-    "drop_aed": 250000,
-    "drop_pct": 6.7,
-    "detected_at": "2026-11-04T10:23:43.749639Z"
-  },
-  {
-    "id": "159147381",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-raha-island-edge-159147381.html",
-    "title": "Genuine Resale Below OP | Scenic Lagoon View",
+    "id": "145983530",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-mina-al-arab-the-lagoons-sea-lane-suites-building-6-145983530.html",
+    "title": "Perfect Condition l Spacious Apartment Lagoon View",
     "type": "Apartment",
-    "location": "Edge, Raha Island, Mina Al Arab, Ras Al Khaimah",
-    "price": 1180000,
+    "location": "Sea Lane Suites Building 6, The Lagoons, Mina Al Arab, Ras Al Khaimah",
+    "price": 869999,
     "beds": "1",
     "baths": "2",
-    "sqft": 940,
-    "price_sqft": 1255,
-    "old_price": 1230000,
-    "new_price": 1180000,
-    "drop_aed": 50000,
-    "drop_pct": 4.1,
-    "detected_at": "2026-11-04T10:23:43.749435Z"
+    "sqft": 1050,
+    "price_sqft": 828,
+    "old_price": 880000,
+    "new_price": 869999,
+    "drop_aed": 10001,
+    "drop_pct": 1.1,
+    "detected_at": "2026-11-05T10:48:25.085507Z"
   }
 ]
