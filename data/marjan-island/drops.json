@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "162787337",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-marjan-island-address-residences-162787337.html",
+    "title": "FOR SALE - REDUCED PRICE |2 BHK ADDRESS RESIDENCE",
+    "type": "Apartment",
+    "location": "Address Residences, Al Marjan Island, Ras Al Khaimah",
+    "price": 3200000,
+    "beds": "2",
+    "baths": "3",
+    "sqft": 1169,
+    "price_sqft": 2737,
+    "old_price": 3500000,
+    "new_price": 3200000,
+    "drop_aed": 300000,
+    "drop_pct": 8.6,
+    "detected_at": "2026-11-12T10:35:22.026448Z"
+  }
+]
