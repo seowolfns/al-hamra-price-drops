@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "167875988",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-royal-breeze-royal-breeze-3-167875988.html",
+    "title": "Upgraded Studio | Fully Furnished | Golf Course View",
+    "type": "Apartment",
+    "location": "Royal breeze 3, Royal Breeze, Al Hamra Village, Ras Al Khaimah",
+    "price": 550000,
+    "beds": "studio",
+    "baths": "1",
+    "sqft": 600,
+    "price_sqft": 916,
+    "old_price": 575000,
+    "new_price": 550000,
+    "drop_aed": 25000,
+    "drop_pct": 4.3,
+    "detected_at": "2026-11-14T09:05:26.883872Z"
+  }
+]
