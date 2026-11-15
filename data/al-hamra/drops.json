@@ -1,19 +1,19 @@
 [
   {
-    "id": "167875988",
-    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-royal-breeze-royal-breeze-3-167875988.html",
-    "title": "Upgraded Studio | Fully Furnished | Golf Course View",
-    "type": "Apartment",
-    "location": "Royal breeze 3, Royal Breeze, Al Hamra Village, Ras Al Khaimah",
-    "price": 550000,
-    "beds": "studio",
-    "baths": "1",
-    "sqft": 600,
-    "price_sqft": 916,
-    "old_price": 575000,
-    "new_price": 550000,
-    "drop_aed": 25000,
-    "drop_pct": 4.3,
-    "detected_at": "2026-11-14T09:05:26.883872Z"
+    "id": "167447733",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-ras-al-khaimah-al-hamra-village-falcon-island-falcon-island-south-167447733.html",
+    "title": "Soon handover| Near the Beach | 3 Years PP",
+    "type": "Townhouse",
+    "location": "Falcon Island South, Falcon Island, Al Hamra Village, Ras Al Khaimah",
+    "price": 1800000,
+    "beds": "2",
+    "baths": "4",
+    "sqft": 1390,
+    "price_sqft": 1294,
+    "old_price": 1900000,
+    "new_price": 1800000,
+    "drop_aed": 100000,
+    "drop_pct": 5.3,
+    "detected_at": "2026-11-15T09:20:31.800012Z"
   }
 ]
