@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "160532325",
+    "url": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-ras-al-khaimah-al-hamra-village-ellington-views-i-160532325.html",
+    "title": "Below 2023 Price| Largest Layout | 200 k below OP",
+    "type": "Apartment",
+    "location": "Ellington Views I, Al Hamra Village, Ras Al Khaimah",
+    "price": 1880000,
+    "beds": "1",
+    "baths": "2",
+    "sqft": 1104,
+    "price_sqft": 1702,
+    "old_price": 1990000,
+    "new_price": 1880000,
+    "drop_aed": 110000,
+    "drop_pct": 5.5,
+    "detected_at": "2026-11-21T10:10:10.732985Z"
+  }
+]
